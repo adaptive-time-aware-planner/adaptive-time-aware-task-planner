@@ -1,0 +1,278 @@
+{
+  "Drawer": {
+    "count": 28,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan10",
+      "FloorPlan11",
+      "FloorPlan12",
+      "FloorPlan13",
+      "FloorPlan15",
+      "FloorPlan16",
+      "FloorPlan17",
+      "FloorPlan18",
+      "FloorPlan19",
+      "FloorPlan2",
+      "FloorPlan20",
+      "FloorPlan21",
+      "FloorPlan22",
+      "FloorPlan23",
+      "FloorPlan24",
+      "FloorPlan25",
+      "FloorPlan26",
+      "FloorPlan27",
+      "FloorPlan28",
+      "FloorPlan3",
+      "FloorPlan30",
+      "FloorPlan4",
+      "FloorPlan5",
+      "FloorPlan6",
+      "FloorPlan7",
+      "FloorPlan8",
+      "FloorPlan9"
+    ]
+  },
+  "Stool": {
+    "count": 14,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan11",
+      "FloorPlan12",
+      "FloorPlan15",
+      "FloorPlan17",
+      "FloorPlan20",
+      "FloorPlan22",
+      "FloorPlan24",
+      "FloorPlan25",
+      "FloorPlan3",
+      "FloorPlan5",
+      "FloorPlan6",
+      "FloorPlan7",
+      "FloorPlan8"
+    ]
+  },
+  "Kettle": {
+    "count": 15,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan11",
+      "FloorPlan15",
+      "FloorPlan17",
+      "FloorPlan18",
+      "FloorPlan2",
+      "FloorPlan22",
+      "FloorPlan29",
+      "FloorPlan3",
+      "FloorPlan30",
+      "FloorPlan5",
+      "FloorPlan6",
+      "FloorPlan7",
+      "FloorPlan8",
+      "FloorPlan9"
+    ]
+  },
+  "PaperTowelRoll": {
+    "count": 10,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan10",
+      "FloorPlan11",
+      "FloorPlan13",
+      "FloorPlan16",
+      "FloorPlan18",
+      "FloorPlan24",
+      "FloorPlan3",
+      "FloorPlan5",
+      "FloorPlan6"
+    ]
+  },
+  "Bottle": {
+    "count": 7,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan10",
+      "FloorPlan16",
+      "FloorPlan17",
+      "FloorPlan23",
+      "FloorPlan30",
+      "FloorPlan8"
+    ]
+  },
+  "Book": {
+    "count": 2,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan7"
+    ]
+  },
+  "Shelf": {
+    "count": 9,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan10",
+      "FloorPlan17",
+      "FloorPlan20",
+      "FloorPlan21",
+      "FloorPlan23",
+      "FloorPlan28",
+      "FloorPlan5",
+      "FloorPlan7"
+    ]
+  },
+  "CreditCard": {
+    "count": 3,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan10",
+      "FloorPlan22"
+    ]
+  },
+  "WineBottle": {
+    "count": 10,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan13",
+      "FloorPlan15",
+      "FloorPlan16",
+      "FloorPlan17",
+      "FloorPlan20",
+      "FloorPlan23",
+      "FloorPlan27",
+      "FloorPlan3",
+      "FloorPlan7"
+    ]
+  },
+  "Statue": {
+    "count": 4,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan10",
+      "FloorPlan5",
+      "FloorPlan7"
+    ]
+  },
+  "Vase": {
+    "count": 6,
+    "scenes": [
+      "FloorPlan1",
+      "FloorPlan10",
+      "FloorPlan18",
+      "FloorPlan20",
+      "FloorPlan5",
+      "FloorPlan7"
+    ]
+  },
+  "Chair": {
+    "count": 12,
+    "scenes": [
+      "FloorPlan10",
+      "FloorPlan14",
+      "FloorPlan16",
+      "FloorPlan18",
+      "FloorPlan19",
+      "FloorPlan2",
+      "FloorPlan21",
+      "FloorPlan23",
+      "FloorPlan27",
+      "FloorPlan29",
+      "FloorPlan7",
+      "FloorPlan9"
+    ]
+  },
+  "Ladle": {
+    "count": 10,
+    "scenes": [
+      "FloorPlan14",
+      "FloorPlan16",
+      "FloorPlan2",
+      "FloorPlan20",
+      "FloorPlan25",
+      "FloorPlan27",
+      "FloorPlan30",
+      "FloorPlan4",
+      "FloorPlan5",
+      "FloorPlan8"
+    ]
+  },
+  "CellPhone": {
+    "count": 4,
+    "scenes": [
+      "FloorPlan10",
+      "FloorPlan17",
+      "FloorPlan2",
+      "FloorPlan30"
+    ]
+  },
+  "SideTable": {
+    "count": 3,
+    "scenes": [
+      "FloorPlan21",
+      "FloorPlan28",
+      "FloorPlan3"
+    ]
+  },
+  "DiningTable": {
+    "count": 16,
+    "scenes": [
+      "FloorPlan11",
+      "FloorPlan15",
+      "FloorPlan16",
+      "FloorPlan17",
+      "FloorPlan18",
+      "FloorPlan19",
+      "FloorPlan20",
+      "FloorPlan21",
+      "FloorPlan23",
+      "FloorPlan24",
+      "FloorPlan26",
+      "FloorPlan27",
+      "FloorPlan28",
+      "FloorPlan4",
+      "FloorPlan7",
+      "FloorPlan9"
+    ]
+  },
+  "Pen": {
+    "count": 2,
+    "scenes": [
+      "FloorPlan23",
+      "FloorPlan8"
+    ]
+  },
+  "SprayBottle": {
+    "count": 2,
+    "scenes": [
+      "FloorPlan17",
+      "FloorPlan8"
+    ]
+  },
+  "Pencil": {
+    "count": 2,
+    "scenes": [
+      "FloorPlan13",
+      "FloorPlan23"
+    ]
+  },
+  "Blinds": {
+    "count": 5,
+    "scenes": [
+      "FloorPlan15",
+      "FloorPlan18",
+      "FloorPlan21",
+      "FloorPlan23",
+      "FloorPlan28"
+    ]
+  },
+  "Safe": {
+    "count": 1,
+    "scenes": [
+      "FloorPlan18"
+    ]
+  },
+  "AluminumFoil": {
+    "count": 1,
+    "scenes": [
+      "FloorPlan21"
+    ]
+  }
+}

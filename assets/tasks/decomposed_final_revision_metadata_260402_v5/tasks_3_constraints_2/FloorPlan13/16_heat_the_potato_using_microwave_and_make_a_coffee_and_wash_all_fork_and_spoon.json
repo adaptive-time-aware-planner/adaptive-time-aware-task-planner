@@ -1,0 +1,265 @@
+[
+  {
+    "Task": "Heat Potato using Microwave",
+    "Subtasks": [
+      {
+        "Name": "Place Potato in Microwave",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Potato|-04.08|+00.95|+02.68": 1,
+            "Microwave|-02.69|+01.43|+01.69": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Potato|-04.08|+00.95|+02.68",
+            "GRASP Potato|-04.08|+00.95|+02.68",
+            "NAVIGATE_TO Microwave|-02.69|+01.43|+01.69",
+            "OPEN Microwave|-02.69|+01.43|+01.69",
+            "PLACE_INSIDE Microwave|-02.69|+01.43|+01.69",
+            "CLOSE Microwave|-02.69|+01.43|+01.69"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Microwave for Heating Potato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|-02.69|+01.43|+01.69": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-02.69|+01.43|+01.69",
+            "TOGGLE_ON Microwave|-02.69|+01.43|+01.69"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Potato in Microwave",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Microwave after Heating Potato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|-02.69|+01.43|+01.69": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-02.69|+01.43|+01.69",
+            "TOGGLE_OFF Microwave|-02.69|+01.43|+01.69"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Microwave for Heating Potato",
+            "Interval": 5,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Heated Potato and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Potato|-04.08|+00.95|+02.68": 1,
+            "Microwave|-02.69|+01.43|+01.69": 1,
+            "CounterTop|-04.26|+00.96|+04.94": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-02.69|+01.43|+01.69",
+            "OPEN Microwave|-02.69|+01.43|+01.69",
+            "GRASP Potato|-04.08|+00.95|+02.68",
+            "CLOSE Microwave|-02.69|+01.43|+01.69",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Microwave after Heating Potato",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Make Coffee",
+    "Subtasks": [
+      {
+        "Name": "Prepare Coffee Machine with Mug",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-04.19|+00.91|+03.70": 1,
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Mug|-04.19|+00.91|+03.70",
+            "GRASP Mug|-04.19|+00.91|+03.70",
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "PLACE_ON_TOP CoffeeMachine|-00.28|+00.91|+06.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Coffee Machine",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "TOGGLE_ON CoffeeMachine|-00.28|+00.91|+06.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Coffee Machine with Mug",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Coffee from Machine and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-04.19|+00.91|+03.70": 1,
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1,
+            "CounterTop|-04.26|+00.96|+04.94": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "GRASP Mug|-04.19|+00.91|+03.70",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Coffee Machine",
+            "Interval": 5,
+            "Urgency": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Wash All Fork and Spoon",
+    "Subtasks": [
+      {
+        "Name": "Wash Fork and place on counterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Fork|-03.20|+00.92|+05.46": 1,
+            "Sink|-04.19|+00.92|+03.28|SinkBasin": 1,
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Fork|-03.20|+00.92|+05.46",
+            "GRASP Fork|-03.20|+00.92|+05.46",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "PLACE_INSIDE Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_ON Faucet|-04.44|+00.91|+03.29",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-04.44|+00.91|+03.29",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "GRASP Fork|-03.20|+00.92|+05.46",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Wash Spoon and place on counterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Spoon|-03.17|+00.91|+05.37": 1,
+            "Sink|-04.19|+00.92|+03.28|SinkBasin": 1,
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Spoon|-03.17|+00.91|+05.37",
+            "GRASP Spoon|-03.17|+00.91|+05.37",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "PLACE_INSIDE Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_ON Faucet|-04.44|+00.91|+03.29",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-04.44|+00.91|+03.29",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "GRASP Spoon|-03.17|+00.91|+05.37",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

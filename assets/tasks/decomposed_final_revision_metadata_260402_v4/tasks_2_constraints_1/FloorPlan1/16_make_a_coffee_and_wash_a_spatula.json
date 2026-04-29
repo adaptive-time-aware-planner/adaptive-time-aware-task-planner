@@ -1,0 +1,122 @@
+[
+  {
+    "Task": "Make Coffee",
+    "Subtasks": [
+      {
+        "Name": "Prepare Coffee Machine with Mug",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-01.76|+00.90|-00.62": 1,
+            "CoffeeMachine|-01.98|+00.90|-00.19": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Mug|-01.76|+00.90|-00.62",
+            "GRASP Mug|-01.76|+00.90|-00.62",
+            "NAVIGATE_TO CoffeeMachine|-01.98|+00.90|-00.19",
+            "PLACE_ON_TOP CoffeeMachine|-01.98|+00.90|-00.19"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Coffee Machine",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "CoffeeMachine|-01.98|+00.90|-00.19": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-01.98|+00.90|-00.19",
+            "TOGGLE_ON CoffeeMachine|-01.98|+00.90|-00.19"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Coffee Machine with Mug",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Coffee from Machine and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-01.76|+00.90|-00.62": 1,
+            "CoffeeMachine|-01.98|+00.90|-00.19": 1,
+            "CounterTop|-00.08|+01.15|+00.00": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-01.98|+00.90|-00.19",
+            "GRASP Mug|-01.76|+00.90|-00.62",
+            "NAVIGATE_TO CounterTop|-00.08|+01.15|+00.00",
+            "PLACE_ON_TOP CounterTop|-00.08|+01.15|+00.00"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Coffee Machine",
+            "Interval": 5,
+            "Urgency": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Wash Spatula",
+    "Subtasks": [
+      {
+        "Name": "Wash Spatula and place on counterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Spatula|+00.38|+00.91|-02.33": 1,
+            "Sink|-01.90|+00.97|-01.50|SinkBasin": 1,
+            "Faucet|-02.15|+00.91|-01.50": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Spatula|+00.38|+00.91|-02.33",
+            "GRASP Spatula|+00.38|+00.91|-02.33",
+            "NAVIGATE_TO Sink|-01.90|+00.97|-01.50|SinkBasin",
+            "PLACE_INSIDE Sink|-01.90|+00.97|-01.50|SinkBasin",
+            "NAVIGATE_TO Faucet|-02.15|+00.91|-01.50",
+            "TOGGLE_ON Faucet|-02.15|+00.91|-01.50",
+            "WAIT 1.0",
+            "NAVIGATE_TO Faucet|-02.15|+00.91|-01.50",
+            "TOGGLE_OFF Faucet|-02.15|+00.91|-01.50",
+            "NAVIGATE_TO Sink|-01.90|+00.97|-01.50|SinkBasin",
+            "GRASP Spatula|+00.38|+00.91|-02.33",
+            "NAVIGATE_TO CounterTop|-00.08|+01.15|+00.00",
+            "PLACE_ON_TOP CounterTop|-00.08|+01.15|+00.00"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

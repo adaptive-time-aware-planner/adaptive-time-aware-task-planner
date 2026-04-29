@@ -1,0 +1,194 @@
+[
+  {
+    "Task": "Fill Bowl with Water",
+    "Subtasks": [
+      {
+        "Name": "Place Bowl in Sink and Start Filling",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Bowl|-00.49|+00.91|+04.61": 1,
+            "Sink|-04.19|+00.92|+03.28|SinkBasin": 1,
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Bowl|-00.49|+00.91|+04.61",
+            "GRASP Bowl|-00.49|+00.91|+04.61",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "PLACE_INSIDE Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_ON Faucet|-04.44|+00.91|+03.29"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 4
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Turn Off Faucet after Bowl is Filled",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_OFF Faucet|-04.44|+00.91|+03.29"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Bowl in Sink and Start Filling",
+            "Interval": 1,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Make Coffee",
+    "Subtasks": [
+      {
+        "Name": "Prepare Coffee Machine with Mug",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-04.19|+00.91|+03.70": 1,
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Mug|-04.19|+00.91|+03.70",
+            "GRASP Mug|-04.19|+00.91|+03.70",
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "PLACE_ON_TOP CoffeeMachine|-00.28|+00.91|+06.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Coffee Machine",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "TOGGLE_ON CoffeeMachine|-00.28|+00.91|+06.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Coffee Machine with Mug",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Coffee from Machine and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-04.19|+00.91|+03.70": 1,
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1,
+            "CounterTop|-00.35|+00.96|+05.60": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "GRASP Mug|-04.19|+00.91|+03.70",
+            "NAVIGATE_TO CounterTop|-00.35|+00.96|+05.60",
+            "PLACE_ON_TOP CounterTop|-00.35|+00.96|+05.60"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Coffee Machine",
+            "Interval": 5,
+            "Urgency": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Store Apple and Lettuce in Fridge",
+    "Subtasks": [
+      {
+        "Name": "Put Apple in Fridge",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Apple|-04.23|+00.96|+02.73": 1,
+            "Fridge|-00.32|00.00|+03.60": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Apple|-04.23|+00.96|+02.73",
+            "GRASP Apple|-04.23|+00.96|+02.73",
+            "NAVIGATE_TO Fridge|-00.32|00.00|+03.60",
+            "OPEN Fridge|-00.32|00.00|+03.60",
+            "PLACE_INSIDE Fridge|-00.32|00.00|+03.60",
+            "CLOSE Fridge|-00.32|00.00|+03.60"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Put Lettuce in Fridge",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Lettuce|-04.25|+00.98|+02.40": 1,
+            "Fridge|-00.32|00.00|+03.60": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Lettuce|-04.25|+00.98|+02.40",
+            "GRASP Lettuce|-04.25|+00.98|+02.40",
+            "NAVIGATE_TO Fridge|-00.32|00.00|+03.60",
+            "OPEN Fridge|-00.32|00.00|+03.60",
+            "PLACE_INSIDE Fridge|-00.32|00.00|+03.60",
+            "CLOSE Fridge|-00.32|00.00|+03.60"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

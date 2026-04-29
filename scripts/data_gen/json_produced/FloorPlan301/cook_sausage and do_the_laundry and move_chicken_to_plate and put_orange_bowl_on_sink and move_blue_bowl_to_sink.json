@@ -1,0 +1,218 @@
+[
+  {
+    "Task": "Cook Sausage",
+    "Subtasks": [
+      {
+        "Name": "Place Pan on Stove",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan": 1,
+            "Stove": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan",
+            "GRASP Pan",
+            "NAVIGATE_TO Stove",
+            "PLACE_ON_TOP Stove"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Place Sausage in Pan and Start Stove",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Sausage": 1,
+            "Pan": 1,
+            "Stove": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Sausage",
+            "GRASP Sausage",
+            "NAVIGATE_TO Pan",
+            "PLACE_INSIDE Pan",
+            "NAVIGATE_TO Stove",
+            "TOGGLE_ON Stove"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Pan on Stove",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove after Cooking Sausage",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Stove": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Stove",
+            "TOGGLE_OFF Stove"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Sausage in Pan and Start Stove",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Do Laundry",
+    "Subtasks": [
+      {
+        "Name": "Start Laundry Machine",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Laundry_Machine": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Laundry_Machine",
+            "TOGGLE_ON Laundry_Machine"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Unload Laundry Machine",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Laundry_Machine": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Laundry_Machine",
+            "TOGGLE_OFF Laundry_Machine"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Laundry Machine",
+            "Interval": 20,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Move Chicken to Plate",
+    "Subtasks": [
+      {
+        "Name": "Place Chicken on Plate",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Chicken": 1,
+            "Plate": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Chicken",
+            "GRASP Chicken",
+            "NAVIGATE_TO Plate",
+            "PLACE_ON_TOP Plate"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  },
+  {
+    "Task": "Move Orange Bowl to Sink",
+    "Subtasks": [
+      {
+        "Name": "Place Orange Bowl on Sink",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "orange_bowl": 1,
+            "Sink": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO orange_bowl",
+            "GRASP orange_bowl",
+            "NAVIGATE_TO Sink",
+            "PLACE_ON_TOP Sink"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  },
+  {
+    "Task": "Move Blue Bowl to Sink",
+    "Subtasks": [
+      {
+        "Name": "Place Blue Bowl on Sink",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "blue_bowl": 1,
+            "Sink": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO blue_bowl",
+            "GRASP blue_bowl",
+            "NAVIGATE_TO Sink",
+            "PLACE_ON_TOP Sink"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,734 @@
+{
+  "scenes": {
+    "FloorPlan401": {
+      "actions": {
+        "OPEN": {
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "ShowerCurtain": 1
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1,
+          "DishSponge": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Shelf": 4,
+          "SideTable": 1
+        }
+      }
+    },
+    "FloorPlan402": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Shelf": 1,
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan403": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1,
+          "DishSponge": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Shelf": 1,
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan404": {
+      "actions": {
+        "OPEN": {
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "ShowerCurtain": 1
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Shelf": 3
+        }
+      }
+    },
+    "FloorPlan405": {
+      "actions": {
+        "OPEN": {
+          "ShowerCurtain": 1,
+          "Cabinet": 5
+        },
+        "CLOSE": {
+          "ShowerCurtain": 1,
+          "Cabinet": 5
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Cabinet": 5,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan406": {
+      "actions": {
+        "OPEN": {
+          "Cabinet": 2
+        },
+        "CLOSE": {
+          "Cabinet": 2
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Cabinet": 2,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan407": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "ShowerCurtain": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "ShowerCurtain": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan408": {
+      "actions": {
+        "OPEN": {
+          "ShowerCurtain": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerCurtain": 1,
+          "Cabinet": 4
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan409": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 6
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 6
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Drawer": 6,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan410": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 6
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 6
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 1,
+          "Drawer": 6,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan411": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 1,
+          "Drawer": 4,
+          "CounterTop": 2
+        }
+      }
+    },
+    "FloorPlan412": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan413": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 4,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 4,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Drawer": 4,
+          "Cabinet": 4,
+          "Dresser": 1,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan414": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 1,
+          "Cabinet": 9
+        },
+        "CLOSE": {
+          "Drawer": 1,
+          "Cabinet": 9
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1,
+          "DishSponge": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 1,
+          "Drawer": 1,
+          "Cabinet": 9,
+          "CounterTop": 2
+        }
+      }
+    },
+    "FloorPlan415": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 4,
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "Drawer": 4,
+          "ShowerCurtain": 1
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Shelf": 2,
+          "Drawer": 4,
+          "Dresser": 1,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan416": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 2
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 2
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Drawer": 2,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan417": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan418": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 3
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 3
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Cabinet": 3,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan419": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 2,
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "Drawer": 2,
+          "ShowerCurtain": 1
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Drawer": 2,
+          "SideTable": 1
+        }
+      }
+    },
+    "FloorPlan420": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 1,
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "Drawer": 1,
+          "ShowerCurtain": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Drawer": 1,
+          "SideTable": 1,
+          "Bathtub": 2
+        }
+      }
+    },
+    "FloorPlan421": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 8
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 8
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "DishSponge": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Drawer": 8,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan422": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 2,
+          "ShowerCurtain": 1,
+          "Cabinet": 5
+        },
+        "CLOSE": {
+          "Drawer": 2,
+          "ShowerCurtain": 1,
+          "Cabinet": 5
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Shelf": 2,
+          "Drawer": 2,
+          "Cabinet": 5,
+          "CounterTop": 2
+        }
+      }
+    },
+    "FloorPlan423": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 8,
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 8,
+          "ShowerCurtain": 1
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 2
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 2
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Drawer": 8,
+          "CounterTop": 2
+        }
+      }
+    },
+    "FloorPlan424": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan425": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan426": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 8,
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "Drawer": 8,
+          "ShowerCurtain": 1
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Drawer": 8,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan427": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 8,
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "Drawer": 8,
+          "ShowerCurtain": 1
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1,
+          "DishSponge": 1,
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 2,
+          "Drawer": 8,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan428": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Cabinet": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Cabinet": 4,
+          "CounterTop": 1
+        }
+      }
+    },
+    "FloorPlan429": {
+      "actions": {
+        "OPEN": {
+          "ShowerCurtain": 1
+        },
+        "CLOSE": {
+          "ShowerCurtain": 1
+        },
+        "GRASP": {
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Bathtub": 1,
+          "SideTable": 3
+        }
+      }
+    },
+    "FloorPlan430": {
+      "actions": {
+        "OPEN": {
+          "ShowerDoor": 1,
+          "Drawer": 4
+        },
+        "CLOSE": {
+          "ShowerDoor": 1,
+          "Drawer": 4
+        },
+        "TOGGLE_ON": {
+          "ShowerHead": 1
+        },
+        "TOGGLE_OFF": {
+          "ShowerHead": 1
+        },
+        "GRASP": {
+          "DishSponge": 1,
+          "Footstool": 1,
+          "TissueBox": 1
+        },
+        "SLICE": {},
+        "RECEPTACLE": {
+          "Shelf": 1,
+          "Drawer": 4,
+          "SideTable": 1,
+          "Footstool": 1,
+          "CounterTop": 1
+        }
+      }
+    }
+  }
+}

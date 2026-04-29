@@ -1,0 +1,273 @@
+# Python ai2thor control script
+import numpy as np
+import time
+# A list of available functions. The LLM must use the function names and formats from this list.
+# Available functions: move_to, pickup, slice, say, put,  drop, toggle_on, toggle_off, open, close, is_obj_visible, get_obj_names, get_obj_id
+from utils import move_to, pickup, slice, say, put,  drop, toggle_on, toggle_off, open, close, is_obj_visible, get_obj_names, get_obj_id
+from plan_utils import parse_question
+
+
+objects = ['tomato', 'potato', 'pan', 'stoveburner', 'stoveknob', 'faucet', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread', 'microwave', 'plate', 'countertop', 'kettle',]
+# make me a Toast and set the table for lunch
+# make Toast
+say('OK - toast the bread')
+bread_id = get_obj_id('bread')
+# It's good practice to always check if an object was found.
+if bread_id:
+    toaster_id = get_obj_id('toaster')
+    move_to(bread_id)
+    if parse_question('is bread sliceable?'):
+      if not parse_question('is bread sliced?'):
+        slice(bread_id)
+        breadsliced_id = get_obj_id('breadsliced')
+      else:
+        breadsliced_id = get_obj_id('breadsliced')
+      pickup(breadsliced_id)
+      microwave_id = get_obj_id('microwave')
+      if microwave_id:
+          move_to(microwave_id)
+          if parse_question(f'is microwave close?'):
+            open(microwave_id)
+          put(microwave_id)
+          close(microwave_id) 
+          toggle_on(microwave_id)
+          time.sleep(1)
+          toggle_off(microwave_id)
+          open(microwave_id)
+          pickup(breadsliced_id)
+          countertop_id = get_obj_id('countertop')
+          move_to(countertop_id)
+          put(countertop_id)
+      else:
+          say("I can't find the microwave.")
+    else:
+      say('The Bread is not sliceable.')
+else:
+    say("I can't find the bread.")
+# set the table for lunch
+plate_id = get_obj_id('plate')
+if plate_id:
+    move_to(plate_id)
+    pickup(plate_id)
+    countertop_id = get_obj_id('countertop')
+    move_to(countertop_id)
+    put(countertop_id)
+    tomato_id = get_obj_id('tomato')
+    move_to(tomato_id)
+    pickup(tomato_id)
+    move_to(plate_id)
+    put(plate_id)
+    breadsliced_id = get_obj_id('breadsliced')
+    if breadsliced_id:
+        move_to(breadsliced_id)
+        pickup(breadsliced_id)
+        move_to(plate_id)
+        put(plate_id)
+else:
+    say("I can't find the plate.")
+
+
+objects = ['tomato', 'potato', 'pan', 'stoveburner', 'stoveknob', 'faucet', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread', 'microwave', 'plate', 'countertop', 'kettle',]
+# Wash Tomato, Potato and egg, and Cook Egg fry
+# pick up the Tomato
+tomato_id = get_obj_id('tomato')
+if tomato_id:
+    move_to(tomato_id)
+    pickup(tomato_id)
+    # go to the sinkbasin
+    sinkbasin_id = get_obj_id('sinkbasin')
+    move_to(sinkbasin_id)
+    # wash the tomato
+    faucet_id = get_obj_id('faucet')
+    toggle_on(faucet_id)
+    if parse_question('isn\'t tomato in hand?'):
+      move_to(tomato_id)
+      pickup(tomato_id)
+      move_to(sinkbasin_id)
+    put(sinkbasin_id)
+    toggle_off(faucet_id)
+    pickup(tomato_id)
+    # put back the tomato to countertop
+    countertop_id = get_obj_id('countertop')
+    move_to(countertop_id)
+    if parse_question('isn\'t tomato in hand?'):
+      move_to(tomato_id)
+      pickup(tomato_id)
+      move_to(countertop_id)
+    put(countertop_id)
+else:
+    say("I can't find the tomato.")
+# pick up the Potato
+potato_id = get_obj_id('potato')
+if potato_id:
+    move_to(potato_id)
+    pickup(potato_id)
+    # go to the sinkbasin
+    sinkbasin_id = get_obj_id('sinkbasin')
+    move_to(sinkbasin_id)
+    # wash the potato
+    faucet_id = get_obj_id('faucet')
+    toggle_on(faucet_id)
+    if parse_question('isn\'t potato in hand?'):
+      move_to(potato_id)
+      pickup(potato_id)
+      move_to(sinkbasin_id)
+    put(sinkbasin_id)
+    toggle_off(faucet_id)
+    pickup(potato_id)
+    # put back the potato to countertop
+    countertop_id = get_obj_id('countertop')
+    move_to(countertop_id)
+    if parse_question('isn\'t potato in hand?'):
+      move_to(potato_id)
+      pickup(potato_id)
+      move_to(countertop_id)
+    put(countertop_id)
+else:
+    say("I can't find the potato.")
+# pick up the egg
+receptacle = get_obj_id(parse_question('where is the egg inside?'))
+if receptacle is not None:
+  move_to(receptacle)
+  if parse_question(f'is {{receptacle}} openable?'):
+    open(receptacle)
+    egg_id = get_obj_id('egg')
+    pickup(egg_id)
+    close(receptacle)
+  else:
+    egg_id = get_obj_id('egg')
+    move_to(egg_id)
+    pickup(egg_id)
+# go to the sinkbasin
+sinkbasin_id = get_obj_id('sinkbasin')
+move_to(sinkbasin_id)
+# wash the egg
+faucet_id = get_obj_id('faucet')
+toggle_on(faucet_id)
+if parse_question('isn\'t egg in hand?'):
+  move_to(egg_id)
+  pickup(egg_id)
+  move_to(sinkbasin_id)
+put(sinkbasin_id)
+toggle_off(faucet_id)
+pickup(egg_id)
+# put back the egg to countertop
+countertop_id = get_obj_id('countertop')
+move_to(countertop_id)
+if parse_question('isn\'t egg in hand?'):
+  move_to(egg_id)
+  pickup(egg_id)
+  move_to(countertop_id)
+put(countertop_id)
+# Cook Egg Fry
+pan_id = get_obj_id('pan')
+stoveburner_id = get_obj_id('stoveburner')
+if not parse_question('is pan on the stoveburner?'):
+  move_to(pan_id)
+  if parse_question('is anything in hand?'):
+    obj_in_hand = parse_question('what is in hand?')
+    if parse_question(f'is {{obj_in_hand}} breakable?'):
+      move_to(get_obj_id('countertop'))
+    else:
+      drop()
+  pickup(pan_id)
+  move_to(stoveburner_id)
+  put(stoveburner_id)
+egg_id = get_obj_id('egg')
+move_to(egg_id)
+if parse_question('is anything in hand?'):
+    obj_in_hand = parse_question('what is in hand?')
+    if parse_question(f'is {{obj_in_hand}} breakable?'):
+      move_to(get_obj_id('countertop'))
+    else:
+      drop()
+pickup(egg_id)
+move_to(pan_id)
+put(pan_id)
+slice(egg_id)
+if parse_question('is stoveburner toggled?'):
+  time.sleep(2)
+else:
+  stoveknob_id = get_obj_id('stoveknob')
+  toggle_on(stoveknob_id)
+  time.sleep(2)
+toggle_off(stoveknob_id)
+
+
+objects = ['tomato', 'potato', 'pan', 'stoveburner', 'stoveknob', 'faucet', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread', 'microwave', 'plate', 'countertop', 'kettle',]
+# Use coffee_machine to make coffee, then pick up the Apple
+# pick up the mug
+mug_id = get_obj_id('mug')
+if mug_id:
+    move_to(mug_id)
+    pickup(mug_id)
+    # go to the coffee_machine
+    coffee_machine_id = get_obj_id('coffee_machine')
+    move_to(coffee_machine_id)
+    # make coffee
+    put(coffee_machine_id)
+    toggle_on(coffee_machine_id)
+    if not parse_question('is mug filled with coffee?'):
+      toggle_on(coffee_machine_id)
+    pickup(mug)
+    countertop_id = get_obj_id('countertop')
+    move_to(countertop_id)
+    put(countertop_id)
+else:
+    say("I can't find the mug.")
+# pick up the apple
+apple_id = get_obj_id('apple')
+if apple_id:
+    move_to(apple_id)
+    pickup(apple_id)
+else:
+    say("I can't find the apple.")
+
+objects = ['shelf', 'tomato', 'potato', 'pan', 'stoveburner', 'stoveknob', 'faucet', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread', 'microwave', 'plate', 'countertop', 'kettle',]
+# put tomato and apple in fridge and put book in shelf
+# put tomato in fridge
+tomato_id = get_obj_id('tomato')
+if tomato_id:
+    fridge_id = get_obj_id('fridge')
+    move_to(tomato_id)
+    pickup(tomato_id)
+    move_to(fridge_id)
+    open(fridge_id)
+    if not parse_question('is tomato in my hand?'):
+      move_to(tomato_id)
+      pickup(tomato_id)
+      move_to(fridge_id)
+    put(fridge)
+    close(fridge)
+else:
+    say("I can't find the tomato.")
+# put apple in fridge
+apple_id = get_obj_id('apple')
+if apple_id:
+    fridge_id = get_obj_id('fridge')
+    move_to(apple_id)
+    pickup(apple_id)
+    move_to(fridge_id)
+    open(fridge_id)
+    if not parse_question('is apple in my hand?'):
+      move_to(apple_id)
+      pickup(apple_id)
+      move_to(fridge_id)
+    put(fridge)
+    close(fridge)
+else:
+    say("I can't find the apple.")
+# Put Book in shelf
+book_id = get_obj_id('book')
+if book_id:
+    shelf_id = get_obj_id('shelf')
+    move_to(book_id)
+    pickup(book_id)
+    move_to(shelf_id)
+    if not parse_question('is book in my hand?'):
+      move_to(book_id)
+      pickup(book_id)
+      move_to(shelf_id)
+    put(shelf_id)
+else:
+    say("I can't find the book.")

@@ -1,0 +1,38 @@
+{
+    "OPEN": [
+        "Cabinet"
+    ],
+    "CLOSE": [
+        "Cabinet"
+    ],
+    "TOGGLE_ON": [
+        "Stove",
+        "washing_machine"
+    ],
+    "TOGGLE_OFF": [
+        "Stove",
+        "washing_machine"
+    ],
+    "GRASP": [
+        "Banana",
+        "Sausage",
+        "Chicken",
+        "Pan",
+        "Cup",
+        "Plate",
+        "blue_bowl",
+        "orange_bowl"
+    ],
+    "RECEPTACLE": [
+        "Pan",
+        "blue_bowl",
+        "Table",
+        "Sink",
+        "Stove",
+        "CounterTop",
+        "Cabinet",
+        "orange_bowl",
+        "blue_bowl",
+        "Plate"
+    ]
+}

@@ -1,0 +1,34 @@
+from utils import controller, move_to, pickup, slice, say, put, drop, toggle_on, toggle_off, open, close, is_obj_visible, get_obj_names, get_obj_id, get_true_states, get_ability_states, get_parentReceptacles, get_obj_in_hand
+
+['tomato', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread']
+# is the bread sliced?
+bread = get_obj_id('bread')
+true_states = get_true_states(bread)
+ret_val = any("slice".lower() in state.lower() for state in true_states)
+['tomato', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread']
+# is the bread sliceable?
+bread = get_obj_id('bread')
+ability_states = get_ability_states(bread)
+ret_val = any("slice".lower() in state.lower() for state in ability_states)
+['tomato', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread']
+# is the fridge open?
+fridge = get_obj_id('fridge')
+true_states = get_true_states(fridge)
+ret_val = any("open".lower() in state.lower() for state in true_states)
+['tomato', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread']
+# is the drawer closed?
+drawer = get_obj_id('drawer')
+true_states = get_true_states(drawer)
+ret_val = not(any("open".lower() in state.lower() for state in true_states))
+['tomato', 'fridge', 'apple', 'sinkbasin', 'drawer', 'book', 'coffeemachine', 'mug', 'egg', 'bread']
+# is tomato in fridge?
+tomato = get_obj_id('tomato')
+fridge = get_obj_id('fridge')
+parentReceptacles = get_parentReceptacles(tomato)
+ret_val = any("fridge".lower() in obj.lower() for obj in parentReceptacles)
+# is tomato in my hand?
+tomato_id = get_obj_id('tomato')
+if get_obj_in_hand == tomato:
+    ret_val = True
+# What is in my hand?
+ret_val = get_obj_in_hand()

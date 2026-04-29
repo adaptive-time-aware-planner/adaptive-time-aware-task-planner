@@ -1,0 +1,138 @@
+[
+  {
+    "Task": "Make Coffee",
+    "Subtasks": [
+      {
+        "Name": "Prepare Coffee Machine with Mug",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-04.19|+00.91|+03.70": 1,
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Mug|-04.19|+00.91|+03.70",
+            "GRASP Mug|-04.19|+00.91|+03.70",
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "PLACE_ON_TOP CoffeeMachine|-00.28|+00.91|+06.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Coffee Machine",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "TOGGLE_ON CoffeeMachine|-00.28|+00.91|+06.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Coffee Machine with Mug",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Coffee from Machine and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Mug|-04.19|+00.91|+03.70": 1,
+            "CoffeeMachine|-00.28|+00.91|+06.56": 1,
+            "CounterTop|-04.26|+00.96|+04.94": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO CoffeeMachine|-00.28|+00.91|+06.56",
+            "GRASP Mug|-04.19|+00.91|+03.70",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Coffee Machine",
+            "Interval": 5,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Put Apple and Lettuce in Fridge",
+    "Subtasks": [
+      {
+        "Name": "Put Apple in Fridge",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Apple|-04.23|+00.96|+02.73": 1,
+            "Fridge|-00.32|00.00|+03.60": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Apple|-04.23|+00.96|+02.73",
+            "GRASP Apple|-04.23|+00.96|+02.73",
+            "NAVIGATE_TO Fridge|-00.32|00.00|+03.60",
+            "OPEN Fridge|-00.32|00.00|+03.60",
+            "PLACE_INSIDE Fridge|-00.32|00.00|+03.60",
+            "CLOSE Fridge|-00.32|00.00|+03.60"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Put Lettuce in Fridge",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Lettuce|-04.25|+00.98|+02.40": 1,
+            "Fridge|-00.32|00.00|+03.60": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Lettuce|-04.25|+00.98|+02.40",
+            "GRASP Lettuce|-04.25|+00.98|+02.40",
+            "NAVIGATE_TO Fridge|-00.32|00.00|+03.60",
+            "OPEN Fridge|-00.32|00.00|+03.60",
+            "PLACE_INSIDE Fridge|-00.32|00.00|+03.60",
+            "CLOSE Fridge|-00.32|00.00|+03.60"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

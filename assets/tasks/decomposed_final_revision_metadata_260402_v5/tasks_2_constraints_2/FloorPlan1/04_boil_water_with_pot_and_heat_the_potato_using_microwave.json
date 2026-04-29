@@ -1,0 +1,229 @@
+[
+  {
+    "Task": "Boil Water with Pot",
+    "Subtasks": [
+      {
+        "Name": "Place Pot in Sink and Start Filling",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pot|-01.22|+00.90|-02.36": 1,
+            "Sink|-01.90|+00.97|-01.50|SinkBasin": 1,
+            "Faucet|-02.15|+00.91|-01.50": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pot|-01.22|+00.90|-02.36",
+            "GRASP Pot|-01.22|+00.90|-02.36",
+            "NAVIGATE_TO Sink|-01.90|+00.97|-01.50|SinkBasin",
+            "PLACE_INSIDE Sink|-01.90|+00.97|-01.50|SinkBasin",
+            "NAVIGATE_TO Faucet|-02.15|+00.91|-01.50",
+            "TOGGLE_ON Faucet|-02.15|+00.91|-01.50"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 4
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Turn Off Faucet after Pot is Filled",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Faucet|-02.15|+00.91|-01.50": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Faucet|-02.15|+00.91|-01.50",
+            "TOGGLE_OFF Faucet|-02.15|+00.91|-01.50"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Pot in Sink and Start Filling",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Place Pot on Stove and Start Boiling",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pot|-01.22|+00.90|-02.36": 1,
+            "StoveBurner|-00.47|+00.92|-02.37": 1,
+            "StoveKnob|-00.48|+00.88|-02.19": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pot|-01.22|+00.90|-02.36",
+            "GRASP Pot|-01.22|+00.90|-02.36",
+            "NAVIGATE_TO StoveBurner|-00.47|+00.92|-02.37",
+            "PLACE_ON_TOP Pot|-01.22|+00.90|-02.36 StoveBurner|-00.47|+00.92|-02.37",
+            "NAVIGATE_TO StoveKnob|-00.48|+00.88|-02.19",
+            "TOGGLE_ON StoveKnob|-00.48|+00.88|-02.19"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Faucet after Pot is Filled",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove after Boiling Water",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "StoveKnob|-00.48|+00.88|-02.19": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO StoveKnob|-00.48|+00.88|-02.19",
+            "TOGGLE_OFF StoveKnob|-00.48|+00.88|-02.19"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Pot on Stove and Start Boiling",
+            "Interval": 15,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Heat the Potato using Microwave",
+    "Subtasks": [
+      {
+        "Name": "Place Potato in Microwave",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Potato|-01.66|+00.93|-02.15": 1,
+            "Microwave|-00.24|+01.69|-02.53": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Potato|-01.66|+00.93|-02.15",
+            "GRASP Potato|-01.66|+00.93|-02.15",
+            "NAVIGATE_TO Microwave|-00.24|+01.69|-02.53",
+            "OPEN Microwave|-00.24|+01.69|-02.53",
+            "PLACE_INSIDE Microwave|-00.24|+01.69|-02.53",
+            "CLOSE Microwave|-00.24|+01.69|-02.53"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Microwave for Heating Potato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|-00.24|+01.69|-02.53": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-00.24|+01.69|-02.53",
+            "TOGGLE_ON Microwave|-00.24|+01.69|-02.53"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Potato in Microwave",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Microwave after Heating Potato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|-00.24|+01.69|-02.53": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-00.24|+01.69|-02.53",
+            "TOGGLE_OFF Microwave|-00.24|+01.69|-02.53"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Microwave for Heating Potato",
+            "Interval": 5,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Heated Potato and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Potato|-01.66|+00.93|-02.15": 1,
+            "Microwave|-00.24|+01.69|-02.53": 1,
+            "CounterTop|-00.08|+01.15|+00.00": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-00.24|+01.69|-02.53",
+            "OPEN Microwave|-00.24|+01.69|-02.53",
+            "GRASP Potato|-01.66|+00.93|-02.15",
+            "CLOSE Microwave|-00.24|+01.69|-02.53",
+            "NAVIGATE_TO CounterTop|-00.08|+01.15|+00.00",
+            "PLACE_ON_TOP CounterTop|-00.08|+01.15|+00.00"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Microwave after Heating Potato",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  }
+]

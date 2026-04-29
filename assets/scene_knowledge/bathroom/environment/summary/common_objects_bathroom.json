@@ -1,0 +1,54 @@
+{
+  "total_scenes": 30,
+  "interactions": {
+    "CLOSE": {
+      "objects": [
+        "Toilet"
+      ]
+    },
+    "GRASP": {
+      "objects": [
+        "Candle",
+        "Cloth",
+        "HandTowel",
+        "Plunger",
+        "ScrubBrush",
+        "SoapBar",
+        "SoapBottle",
+        "SprayBottle",
+        "ToiletPaper",
+        "Towel"
+      ]
+    },
+    "OPEN": {
+      "objects": [
+        "Toilet"
+      ]
+    },
+    "RECEPTACLE": {
+      "objects": [
+        "Floor",
+        "GarbageCan",
+        "HandTowelHolder",
+        "Sink",
+        "Toilet",
+        "ToiletPaperHanger",
+        "TowelHolder"
+      ]
+    },
+    "TOGGLE_OFF": {
+      "objects": [
+        "Candle",
+        "Faucet",
+        "LightSwitch"
+      ]
+    },
+    "TOGGLE_ON": {
+      "objects": [
+        "Candle",
+        "Faucet",
+        "LightSwitch"
+      ]
+    }
+  }
+}

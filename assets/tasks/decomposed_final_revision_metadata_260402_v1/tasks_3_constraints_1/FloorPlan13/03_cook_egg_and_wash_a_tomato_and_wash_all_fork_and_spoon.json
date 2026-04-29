@@ -1,0 +1,210 @@
+[
+  {
+    "Task": "Cook Egg and Wash Tomato and Utensils",
+    "Subtasks": [
+      {
+        "Name": "Prepare Pan on Stove and Heat",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan|-02.45|+00.93|+02.02": 1,
+            "StoveBurner|-02.92|+00.92|+02.01": 1,
+            "StoveKnob|-02.97|+01.10|+01.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan|-02.45|+00.93|+02.02",
+            "GRASP Pan|-02.45|+00.93|+02.02",
+            "NAVIGATE_TO StoveBurner|-02.92|+00.92|+02.01",
+            "PLACE_ON_TOP Pan|-02.45|+00.93|+02.02 StoveBurner|-02.92|+00.92|+02.01",
+            "NAVIGATE_TO StoveKnob|-02.97|+01.10|+01.56",
+            "TOGGLE_ON StoveKnob|-02.97|+01.10|+01.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Cook Egg in Pan",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Egg|-04.07|+00.94|+02.81": 1,
+            "Pan|-02.45|+00.93|+02.02": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Egg|-04.07|+00.94|+02.81",
+            "GRASP Egg|-04.07|+00.94|+02.81",
+            "NAVIGATE_TO Pan|-02.45|+00.93|+02.02",
+            "PLACE_ON_TOP Pan|-02.45|+00.93|+02.02",
+            "SLICE Egg|-04.07|+00.94|+02.81"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Pan on Stove and Heat",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove After Cooking Egg",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "StoveKnob|-02.97|+01.10|+01.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO StoveKnob|-02.97|+01.10|+01.56",
+            "TOGGLE_OFF StoveKnob|-02.97|+01.10|+01.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Cook Egg in Pan",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Place Cooked Egg in Pan on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan|-02.45|+00.93|+02.02": 1,
+            "CounterTop|-04.26|+00.96|+04.94": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan|-02.45|+00.93|+02.02",
+            "GRASP Pan|-02.45|+00.93|+02.02",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP Pan|-02.45|+00.93|+02.02 CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Stove After Cooking Egg",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Wash Tomato and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Tomato|-04.16|+00.97|+04.39": 1,
+            "Sink|-04.19|+00.92|+03.28|SinkBasin": 1,
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Tomato|-04.16|+00.97|+04.39",
+            "GRASP Tomato|-04.16|+00.97|+04.39",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "PLACE_INSIDE Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_ON Faucet|-04.44|+00.91|+03.29",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-04.44|+00.91|+03.29",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "GRASP Tomato|-04.16|+00.97|+04.39",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP Tomato|-04.16|+00.97|+04.39 CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Wash Fork and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Fork|-03.20|+00.92|+05.46": 1,
+            "Sink|-04.19|+00.92|+03.28|SinkBasin": 1,
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Fork|-03.20|+00.92|+05.46",
+            "GRASP Fork|-03.20|+00.92|+05.46",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "PLACE_INSIDE Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_ON Faucet|-04.44|+00.91|+03.29",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-04.44|+00.91|+03.29",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "GRASP Fork|-03.20|+00.92|+05.46",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP Fork|-03.20|+00.92|+05.46 CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Wash Spoon and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Spoon|-03.17|+00.91|+05.37": 1,
+            "Sink|-04.19|+00.92|+03.28|SinkBasin": 1,
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Spoon|-03.17|+00.91|+05.37",
+            "GRASP Spoon|-03.17|+00.91|+05.37",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "PLACE_INSIDE Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_ON Faucet|-04.44|+00.91|+03.29",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-04.44|+00.91|+03.29",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "GRASP Spoon|-03.17|+00.91|+05.37",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP Spoon|-03.17|+00.91|+05.37 CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

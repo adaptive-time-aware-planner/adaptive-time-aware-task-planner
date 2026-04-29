@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*.o
+*.pyo
+
+# Build / Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.tar.gz
+*.zip
+*.manifest
+*.spec
+*.kit
+*.txt
+*.tex
+*.pdf
+api_key.txt
+
+# Logs
+*.log
+pip-log.txt
+logs/
+results/
+**/results/
+**/result/
+
+# Unit tests / Coverage
+.tox/
+.nox/
+.coverage
+.cache
+*.cover
+.pytest_cache/
+# *.json
+*.db
+*.csv
+.*.
+temp.py
+average_2.py
+action_fail_analysis.py
+# Jupyter
+.ipynb_checkpoints
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# Media / Temp files
+*.jpg
+*.png
+*.bmp
+*.bak
+*.out
+*.pth
+*.npy
+*.npz
+
+
+
+# System
+.DS_Store
+
+# My code
+archive/
+*.dot
+./temp_env.yml
+sync_repos.sh
+llm_as_a_judge.py
+assets/agent_knowledge/bayesian_estimate.json
+src/baselines/cap/data/*
+src/baselines/cap/result/*
+src/baselines/progprompt/result/*
+assets/results/
+assets/legacy_task/
+assets/ros/
+assets/tasks/legacy_revision/
+assets/result_analysis/**/*.json
+assets/tasks/**/*.json
+assets/tune/debug_trajectories/**/*.json
+docker-compose.override.yml
+
+.bench_cache/

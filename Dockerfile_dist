@@ -1,0 +1,143 @@
+# ==================================================================================================
+# Stage 1: 베이스 이미지 및 기본 환경 설정 (공통 의존성 통합) - CPU 버전 (Ubuntu 22.04)
+# ==================================================================================================
+FROM ubuntu:22.04 AS base
+
+# --- APT Source를 한국 미러(kakao)로 변경 (선택 사항, 속도 향상) ---
+RUN sed -i 's#http://archive.ubuntu.com/ubuntu/#http://mirror.kakao.com/ubuntu/#' /etc/apt/sources.list && \
+    sed -i 's#http://security.ubuntu.com/ubuntu/#http://mirror.kakao.com/ubuntu/#' /etc/apt/sources.list
+
+# --- 환경 변수 설정 ---
+ENV DEBIAN_FRONTEND=noninteractive \
+    TZ=Asia/Seoul
+
+# --- 기본 시스템 도구, Python 공통 도구 및 VNC/GUI 설정 ---
+RUN apt update && \
+    apt install -y --no-install-recommends \
+    # [시스템 기본 도구]
+    build-essential \
+    git \
+    curl \
+    wget \
+    gnupg \
+    locales \
+    software-properties-common \
+    fonts-liberation \
+    # [Python/Graphviz 공통 의존성]
+    python3-pip \
+    python3-dev \
+    graphviz \
+    libgraphviz-dev \
+    # [GUI/VNC 관련]
+    xvfb \
+    x11vnc \
+    xfce4 \
+    xfce4-goodies \
+    novnc \
+    websockify \
+    && \
+    # Locale 설정
+    locale-gen en_US.UTF-8 && \
+    update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
+    # apt 캐시 정리
+    rm -rf /var/lib/apt/lists/*
+
+# ==================================================================================================
+# Stage 2: Python 라이브러리 설치 (TTP) - CPU PyTorch
+# ==================================================================================================
+FROM base AS python_builder_ttp
+
+# --- PyTorch 인덱스 URL을 CPU 버전으로 기본 설정 ---
+ARG PYTORCH_INDEX_URL=https://download.pytorch.org/whl/cpu
+
+WORKDIR /app
+COPY requirements-ttp.txt .
+# CPU 버전 PyTorch 설치
+RUN pip install --default-timeout=1000 torch torchvision --index-url $PYTORCH_INDEX_URL && \
+    pip install --default-timeout=1000 --no-cache-dir -r requirements-ttp.txt
+# ==================================================================================================
+# Stage 3: 공통 런타임 환경 (common_runtime)
+# ==================================================================================================
+FROM base AS common_runtime
+
+# --- 사용자 설정 ---
+ARG UID
+ARG GID
+ARG USERNAME
+
+ENV UID=${UID} \
+    GID=${GID} \
+    USERNAME=${USERNAME}
+
+RUN test -n "${UID}" -a -n "${GID}" -a -n "${USERNAME}" && \
+    groupadd -g ${GID} ${USERNAME} && \
+    useradd -m -u ${UID} -g ${GID} -s /bin/bash ${USERNAME}
+
+# --- Vulkan/GL 및 Unity 의존성 ---
+RUN apt update && \
+    apt install -y --no-install-recommends \
+    libglvnd0 libgl1 libglx0 libegl1 \
+    libglib2.0-0 libx11-6 libxext6 libxrandr2 libxi6 libxrender1 libxfixes3 libxcursor1 libvulkan-dev \
+    libnss3 libasound2 ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
+# --- LunarG Vulkan (CPU 소프트웨어 렌더링 지원을 위해 필요할 수 있음) ---
+RUN set -eux; \
+    curl -fsSL https://packages.lunarg.com/lunarg-signing-key-pub.asc | gpg --dearmor -o /usr/share/keyrings/lunarg-archive-keyring.gpg; \
+    echo "deb [signed-by=/usr/share/keyrings/lunarg-archive-keyring.gpg] https://packages.lunarg.com/vulkan jammy main" > /etc/apt/sources.list.d/lunarg-vulkan.list; \
+    apt update; \
+    apt install -y --no-install-recommends libvulkan1 vulkan-tools vulkan-validationlayers mesa-vulkan-drivers; \
+    rm -rf /var/lib/apt/lists/*
+
+# --- 환경 설정 ---
+ENV LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8 \
+    PYTHONPATH="/app${PYTHONPATH:+:${PYTHONPATH}}" \
+    LIBGL_ALWAYS_SOFTWARE=1 
+    # ^ CPU 렌더링 강제 설정
+
+# --- 터미널 편의 기능: novncdisplay 명령어 등록 ---
+RUN echo '\n\
+novncdisplay() {\n\
+    local ID=$1\n\
+    if [ -z "$ID" ]; then\n\
+        echo "Usage: novncdisplay <ID> (e.g. 98)"\n\
+        return 1\n\
+    fi\n\
+    local VNC_PORT=$((5900 + ID))\n\
+    local WEB_PORT=$((9900 + ID))\n\
+    export DISPLAY=:$ID\n\
+    export LIBGL_ALWAYS_SOFTWARE=1\n\
+    export QT_QPA_PLATFORM=xcb\n\
+    echo "Starting Xvfb on :$ID ..."\n\
+    Xvfb :$ID -screen 0 3840x2160x24 -nolisten tcp >/app/logs/xvfb$ID.log 2>&1 &\n\
+    sleep 1\n\
+    echo "Starting x11vnc on port $VNC_PORT ..."\n\
+    x11vnc -display :$ID -forever -shared -rfbport $VNC_PORT -nopw >/app/logs/vnc$ID.log 2>&1 &\n\
+    echo "Starting websockify on port $WEB_PORT ..."\n\
+    websockify --web=/usr/share/novnc $WEB_PORT localhost:$VNC_PORT >/app/logs/novnc$ID.log 2>&1 &\n\
+    echo "Done. Display :$ID is ready at http://localhost:$WEB_PORT/vnc.html"\n\
+}' >> /etc/bash.bashrc
+
+WORKDIR /app
+RUN chown -R ${USERNAME}:${USERNAME} /app
+CMD ["tail", "-f", "/dev/null"]
+
+# ==================================================================================================
+# Stage 4: TTP 베이스 이미지 (ttp_base)
+# ==================================================================================================
+FROM common_runtime AS ttp_base
+
+COPY --from=python_builder_ttp /usr/local/lib/python3.10/dist-packages/ /usr/local/lib/python3.10/dist-packages/
+COPY --from=python_builder_ttp /usr/local/bin/ /usr/local/bin/
+
+# ==================================================================================================
+# Stage 5: TTP 개발용 이미지 (ttp_development)
+# ==================================================================================================
+FROM ttp_base AS ttp_development
+
+# NVIDIA 관련 설정 제거됨
+# CPU 모드에서는 별도의 OpenGL 벤더 설정 없이 Mesa(소프트웨어 렌더러)를 사용합니다.
+
+USER $USERNAME
+CMD ["tail", "-f", "/dev/null"]

@@ -1,0 +1,29 @@
+# Fast Downward planner (공개 프로젝트, 별도 clone+build 필요)
+# 설치: git clone https://github.com/aibasel/downward.git && cd downward && python build.py
+downward/
+
+# Runtime generated files
+resources/each_run/
+resources/generated_subtask/
+resources/validated_subtask/
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Original LaMMA-P test data (우리는 assets/tasks/ 사용)
+data/final_test_baek/
+data/final_test_lammap/
+data/final_test.zip
+data/aithor_connect/
+exp/
+
+# Docs / CI (Fast Downward)
+downward/docs/
+downward/misc/
+downward/.github/
+
+# Misc
+resources/example.py
+planning시간 저장용 로그

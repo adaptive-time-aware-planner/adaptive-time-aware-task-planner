@@ -1,0 +1,70 @@
+{
+    "Prepare Egg Fry": {
+        "expected_duration": 10.0,
+        "variance": 1.0
+    },
+    "Turn off stove after cooking": {
+        "expected_duration": 250,
+        "variance": 1.1785878607345168e-05
+    },
+    "Prepare Potato": {
+        "expected_duration": 10.0,
+        "variance": 1.0
+    },
+    "Turn off stove after cooking potato": {
+        "expected_duration": 250.0,
+        "variance": 1.0
+    },
+    "Turn off Stove after cooking": {
+        "expected_duration": 250.0,
+        "variance": 1.0
+    },
+    "Retrieve Potato from Microwave and Place on Plate": {
+        "expected_duration": 10.0,
+        "variance": 1.0
+    },
+    "Retrieve Potato from Microwave": {
+        "expected_duration": 10.0,
+        "variance": 1.0
+    },
+    "Turn Off Stove After Boiling Potato": {
+        "expected_duration": 250.0,
+        "variance": 1.0
+    },
+    "Turn Off Stove After Cooking Egg Fry": {
+        "expected_duration": 250.0,
+        "variance": 1.0
+    },
+    "Turn off Stove after Boiling": {
+        "expected_duration": 250.0,
+        "variance": 1.0
+    },
+    "stop filling bathtub": {
+        "expected_duration": 10,
+        "variance": 1.0
+    },
+    "turn off faucet": {
+        "expected_duration": 250,
+        "variance": 1.0
+    },
+    "stop filling pot": {
+        "expected_duration": 5,
+        "variance": 1.0
+    },
+    "retrieve bread from microwave": {
+        "expected_duration": 3,
+        "variance": 1.0
+    },
+    "turn off shower": {
+        "expected_duration": 250,
+        "variance": 1.0
+    },
+    "start microwave": {
+        "expected_duration": 0,
+        "variance": 1.0
+    },
+    "Unload laundry_machine": {
+        "expected_duration": 250,
+        "variance": 1.0
+    }
+}

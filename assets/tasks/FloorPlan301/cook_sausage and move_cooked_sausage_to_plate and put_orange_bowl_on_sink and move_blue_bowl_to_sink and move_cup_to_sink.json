@@ -1,0 +1,185 @@
+[
+  {
+    "Task": "Cook Sausage and Move to Plate",
+    "Subtasks": [
+      {
+        "Name": "Prepare Pan for Sausage",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan": 1,
+            "Stove": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan",
+            "GRASP Pan",
+            "NAVIGATE_TO Stove",
+            "PLACE_ON_TOP Stove"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Cook Sausage",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Sausage": 1,
+            "Pan": 1,
+            "Stove": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Sausage",
+            "GRASP Sausage",
+            "NAVIGATE_TO Pan",
+            "PLACE_INSIDE Pan",
+            "NAVIGATE_TO Stove",
+            "TOGGLE_ON Stove"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Pan for Sausage",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove after Cooking Sausage",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Stove": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Stove",
+            "TOGGLE_OFF Stove"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Cook Sausage",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Put Banana on Plate",
+    "Subtasks": [
+      {
+        "Name": "Place Banana on Plate",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Banana": 1,
+            "Plate": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Banana",
+            "GRASP Banana",
+            "NAVIGATE_TO Plate",
+            "PLACE_ON_TOP Plate"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  },
+  {
+    "Task": "Move Bowls and Cup to Sink",
+    "Subtasks": [
+      {
+        "Name": "Move orange_bowl to Sink",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "orange_bowl": 1,
+            "Sink|SinkBasin": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO orange_bowl",
+            "GRASP orange_bowl",
+            "NAVIGATE_TO Sink|SinkBasin",
+            "PLACE_ON_TOP Sink|SinkBasin"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Move blue_bowl to Sink",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "blue_bowl": 1,
+            "Sink|SinkBasin": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO blue_bowl",
+            "GRASP blue_bowl",
+            "NAVIGATE_TO Sink|SinkBasin",
+            "PLACE_ON_TOP Sink|SinkBasin"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Move Cup to Sink",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Cup": 1,
+            "Sink|SinkBasin": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Cup",
+            "GRASP Cup",
+            "NAVIGATE_TO Sink|SinkBasin",
+            "PLACE_ON_TOP Sink|SinkBasin"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

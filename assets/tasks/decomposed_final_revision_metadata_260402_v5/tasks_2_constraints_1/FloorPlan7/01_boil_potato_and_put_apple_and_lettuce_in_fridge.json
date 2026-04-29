@@ -1,0 +1,174 @@
+[
+  {
+    "Task": "Boil Potato",
+    "Subtasks": [
+      {
+        "Name": "Place Pot in Sink and Start Filling",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pot|-01.60|+00.90|-00.17": 1,
+            "Sink|+00.02|+00.77|-01.71|SinkBasin": 1,
+            "Faucet|-00.11|+00.92|-01.82": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pot|-01.60|+00.90|-00.17",
+            "GRASP Pot|-01.60|+00.90|-00.17",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "PLACE_INSIDE Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "NAVIGATE_TO Faucet|-00.11|+00.92|-01.82",
+            "TOGGLE_ON Faucet|-00.11|+00.92|-01.82"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 4
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Turn Off Faucet after Pot is Filled",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Faucet|-00.11|+00.92|-01.82": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Faucet|-00.11|+00.92|-01.82",
+            "TOGGLE_OFF Faucet|-00.11|+00.92|-01.82"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Pot in Sink and Start Filling",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Place Potato in Pot and Start Boiling on Stove",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Potato|+00.22|+01.16|+02.16": 1,
+            "Pot|-01.60|+00.90|-00.17": 1,
+            "StoveBurner|+01.33|+00.96|-01.42": 1,
+            "StoveKnob|+01.34|+00.91|-01.24": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Potato|+00.22|+01.16|+02.16",
+            "GRASP Potato|+00.22|+01.16|+02.16",
+            "NAVIGATE_TO Pot|-01.60|+00.90|-00.17",
+            "PLACE_INSIDE Pot|-01.60|+00.90|-00.17",
+            "NAVIGATE_TO Pot|-01.60|+00.90|-00.17",
+            "GRASP Pot|-01.60|+00.90|-00.17",
+            "NAVIGATE_TO StoveBurner|+01.33|+00.96|-01.42",
+            "PLACE_ON_TOP Pot|-01.60|+00.90|-00.17 StoveBurner|+01.33|+00.96|-01.42",
+            "NAVIGATE_TO StoveKnob|+01.34|+00.91|-01.24",
+            "TOGGLE_ON StoveKnob|+01.34|+00.91|-01.24"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 4
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Faucet after Pot is Filled",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove after Boiling Potato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "StoveKnob|+01.34|+00.91|-01.24": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO StoveKnob|+01.34|+00.91|-01.24",
+            "TOGGLE_OFF StoveKnob|+01.34|+00.91|-01.24"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Potato in Pot and Start Boiling on Stove",
+            "Interval": 15,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Put Apple and Lettuce in Fridge",
+    "Subtasks": [
+      {
+        "Name": "Put Apple in Fridge",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Apple|-00.63|+00.96|-01.44": 1,
+            "Fridge|-00.04|+00.00|+02.18": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Apple|-00.63|+00.96|-01.44",
+            "GRASP Apple|-00.63|+00.96|-01.44",
+            "NAVIGATE_TO Fridge|-00.04|+00.00|+02.18",
+            "OPEN Fridge|-00.04|+00.00|+02.18",
+            "PLACE_INSIDE Fridge|-00.04|+00.00|+02.18",
+            "CLOSE Fridge|-00.04|+00.00|+02.18"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Put Lettuce in Fridge",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Lettuce|-01.65|+00.96|-01.05": 1,
+            "Fridge|-00.04|+00.00|+02.18": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Lettuce|-01.65|+00.96|-01.05",
+            "GRASP Lettuce|-01.65|+00.96|-01.05",
+            "NAVIGATE_TO Fridge|-00.04|+00.00|+02.18",
+            "OPEN Fridge|-00.04|+00.00|+02.18",
+            "PLACE_INSIDE Fridge|-00.04|+00.00|+02.18",
+            "CLOSE Fridge|-00.04|+00.00|+02.18"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

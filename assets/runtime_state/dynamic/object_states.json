@@ -1,0 +1,61 @@
+{
+    "banana": {
+        "position": 7,
+        "isCooked": false,
+        "parentReceptacles": ["shelf"]
+    },
+    "plate":{
+        "position": 15,
+        "parentReceptacles": ["table"]
+    },
+    "pan" : {
+        "position": 31,
+        "parentReceptacles": ["table"]
+    },
+    "sausage" : {
+        "position": 32,
+        "isCooked": false,
+        "parentReceptacles": ["table"]
+    },
+    "stove": {
+        "position": 33,
+        "parentReceptacles": ["table"],
+        "isToggled": false
+    },
+    "orange_bowl": {
+        "position": 34,
+        "parentReceptacles": ["table"]
+    },
+    "blue_bowl": {
+        "position": 35,
+        "parentReceptacles": ["table"]
+    },
+    "sink|sinkbasin": {
+        "position": 37,
+        "parentReceptacles": null
+    },
+    "laundry_machine": {
+        "position": 38,
+        "parentReceptacles": ["table"],
+        "isToggled": false
+    },
+    "chicken": {
+        "position": 39,
+        "isCooked": false,
+        "parentReceptacles": ["table"]
+    },
+    "cup": {
+        "position": 40,
+        "parentReceptacles": ["table"]
+    },
+    "tomato": {
+        "position": 42,
+        "isCooked": false,
+        "parentReceptacles": ["shelf"]
+    },
+    "table": {
+        "position": 43,
+        "parentReceptacles": null
+    }
+}
+

@@ -1,0 +1,182 @@
+[
+  {
+    "Task": "Heat Bread using Microwave",
+    "Subtasks": [
+      {
+        "Name": "Place Bread in Microwave",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Bread|-01.60|+00.98|-00.84": 1,
+            "Microwave|+01.15|+01.66|-01.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Bread|-01.60|+00.98|-00.84",
+            "GRASP Bread|-01.60|+00.98|-00.84",
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "OPEN Microwave|+01.15|+01.66|-01.61",
+            "PLACE_INSIDE Microwave|+01.15|+01.66|-01.61",
+            "CLOSE Microwave|+01.15|+01.66|-01.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Microwave for Heating Bread",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|+01.15|+01.66|-01.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "TOGGLE_ON Microwave|+01.15|+01.66|-01.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Bread in Microwave",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Microwave after Heating Bread",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|+01.15|+01.66|-01.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "TOGGLE_OFF Microwave|+01.15|+01.66|-01.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Microwave for Heating Bread",
+            "Interval": 5,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Heated Bread and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Bread|-01.60|+00.98|-00.84": 1,
+            "Microwave|+01.15|+01.66|-01.61": 1,
+            "CounterTop|-01.87|+00.95|-00.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "OPEN Microwave|+01.15|+01.66|-01.61",
+            "GRASP Bread|-01.60|+00.98|-00.84",
+            "CLOSE Microwave|+01.15|+01.66|-01.61",
+            "NAVIGATE_TO CounterTop|-01.87|+00.95|-00.61",
+            "PLACE_ON_TOP CounterTop|-01.87|+00.95|-00.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Microwave after Heating Bread",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Wash Tomato and Spatula",
+    "Subtasks": [
+      {
+        "Name": "Wash Tomato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Tomato|+00.17|+00.83|+02.03": 1,
+            "Sink|+00.02|+00.77|-01.71|SinkBasin": 1,
+            "Faucet|-00.11|+00.92|-01.82": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Tomato|+00.17|+00.83|+02.03",
+            "GRASP Tomato|+00.17|+00.83|+02.03",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "PLACE_INSIDE Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "NAVIGATE_TO Faucet|-00.11|+00.92|-01.82",
+            "TOGGLE_ON Faucet|-00.11|+00.92|-01.82",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-00.11|+00.92|-01.82",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "GRASP Tomato|+00.17|+00.83|+02.03",
+            "NAVIGATE_TO CounterTop|-01.87|+00.95|-00.61",
+            "PLACE_ON_TOP CounterTop|-01.87|+00.95|-00.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Wash Spatula",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Spatula|+00.09|+00.93|-01.64": 1,
+            "Sink|+00.02|+00.77|-01.71|SinkBasin": 1,
+            "Faucet|-00.11|+00.92|-01.82": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Spatula|+00.09|+00.93|-01.64",
+            "GRASP Spatula|+00.09|+00.93|-01.64",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "PLACE_INSIDE Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "NAVIGATE_TO Faucet|-00.11|+00.92|-01.82",
+            "TOGGLE_ON Faucet|-00.11|+00.92|-01.82",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-00.11|+00.92|-01.82",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "GRASP Spatula|+00.09|+00.93|-01.64",
+            "NAVIGATE_TO CounterTop|-01.87|+00.95|-00.61",
+            "PLACE_ON_TOP CounterTop|-01.87|+00.95|-00.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

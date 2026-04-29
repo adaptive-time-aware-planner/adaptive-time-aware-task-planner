@@ -1,0 +1,639 @@
+{
+  "scenes": {
+    "FloorPlan1": {
+      "actions": {
+        "OPEN": {
+          "Book": 1,
+          "Drawer": 9,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Book": 1,
+          "Drawer": 9,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Vase": 2,
+          "Book": 1,
+          "Statue": 1,
+          "Bottle": 1,
+          "PaperTowelRoll": 1,
+          "Kettle": 1,
+          "CreditCard": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 9,
+          "Shelf": 3,
+          "Stool": 2
+        }
+      }
+    },
+    "FloorPlan2": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 13,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 13,
+          "Kettle": 1
+        },
+        "TOGGLE_ON": {
+          "CellPhone": 1
+        },
+        "TOGGLE_OFF": {
+          "CellPhone": 1
+        },
+        "GRASP": {
+          "Ladle": 1,
+          "Kettle": 1,
+          "CellPhone": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 13,
+          "Chair": 1
+        }
+      }
+    },
+    "FloorPlan3": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 8,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 8,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1,
+          "Kettle": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 8,
+          "Stool": 1,
+          "SideTable": 1
+        }
+      }
+    },
+    "FloorPlan4": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 6
+        },
+        "CLOSE": {
+          "Drawer": 6
+        },
+        "GRASP": {
+          "Ladle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 6,
+          "DiningTable": 1
+        }
+      }
+    },
+    "FloorPlan5": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 3,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 3,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Vase": 3,
+          "Ladle": 1,
+          "Statue": 1,
+          "PaperTowelRoll": 1,
+          "Kettle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 3,
+          "Shelf": 3,
+          "Stool": 2
+        }
+      }
+    },
+    "FloorPlan6": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 4,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 4,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1,
+          "Kettle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 4,
+          "Stool": 2
+        }
+      }
+    },
+    "FloorPlan7": {
+      "actions": {
+        "OPEN": {
+          "Book": 1,
+          "Drawer": 4,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Book": 1,
+          "Drawer": 4,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Vase": 2,
+          "Book": 1,
+          "Statue": 2,
+          "Kettle": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 4,
+          "DiningTable": 1,
+          "Chair": 3,
+          "Shelf": 3,
+          "Stool": 2
+        }
+      }
+    },
+    "FloorPlan8": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 8,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 8,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Pen": 1,
+          "Ladle": 1,
+          "Bottle": 1,
+          "Kettle": 1,
+          "SprayBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 8,
+          "Stool": 1
+        }
+      }
+    },
+    "FloorPlan9": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 11,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 11,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Kettle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 11,
+          "DiningTable": 1,
+          "Chair": 1
+        }
+      }
+    },
+    "FloorPlan10": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 3
+        },
+        "CLOSE": {
+          "Drawer": 3
+        },
+        "TOGGLE_ON": {
+          "CellPhone": 1
+        },
+        "TOGGLE_OFF": {
+          "CellPhone": 1
+        },
+        "GRASP": {
+          "Vase": 2,
+          "Statue": 1,
+          "Bottle": 1,
+          "PaperTowelRoll": 1,
+          "CellPhone": 1,
+          "CreditCard": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 3,
+          "Chair": 2,
+          "Shelf": 3
+        }
+      }
+    },
+    "FloorPlan11": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 6,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 6,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1,
+          "Kettle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 6,
+          "DiningTable": 1,
+          "Stool": 1
+        }
+      }
+    },
+    "FloorPlan12": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 4
+        },
+        "CLOSE": {
+          "Drawer": 4
+        },
+        "RECEPTACLE": {
+          "Drawer": 4,
+          "Stool": 1
+        }
+      }
+    },
+    "FloorPlan13": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 12
+        },
+        "CLOSE": {
+          "Drawer": 12
+        },
+        "GRASP": {
+          "Pencil": 1,
+          "PaperTowelRoll": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 12
+        }
+      }
+    },
+    "FloorPlan14": {
+      "actions": {
+        "GRASP": {
+          "Ladle": 1
+        },
+        "RECEPTACLE": {
+          "Chair": 2
+        }
+      }
+    },
+    "FloorPlan15": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 3,
+          "Blinds": 1,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 3,
+          "Blinds": 1,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Kettle": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 3,
+          "DiningTable": 1,
+          "Stool": 1
+        }
+      }
+    },
+    "FloorPlan16": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 12
+        },
+        "CLOSE": {
+          "Drawer": 12
+        },
+        "GRASP": {
+          "Ladle": 1,
+          "Bottle": 1,
+          "PaperTowelRoll": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 12,
+          "DiningTable": 1,
+          "Chair": 2
+        }
+      }
+    },
+    "FloorPlan17": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 6,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 6,
+          "Kettle": 1
+        },
+        "TOGGLE_ON": {
+          "CellPhone": 1
+        },
+        "TOGGLE_OFF": {
+          "CellPhone": 1
+        },
+        "GRASP": {
+          "Bottle": 1,
+          "Kettle": 1,
+          "CellPhone": 1,
+          "SprayBottle": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 6,
+          "DiningTable": 2,
+          "Shelf": 2,
+          "Stool": 1
+        }
+      }
+    },
+    "FloorPlan18": {
+      "actions": {
+        "OPEN": {
+          "Safe": 1,
+          "Drawer": 5,
+          "Blinds": 1,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Safe": 1,
+          "Drawer": 5,
+          "Blinds": 1,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Vase": 3,
+          "PaperTowelRoll": 1,
+          "Kettle": 1
+        },
+        "RECEPTACLE": {
+          "Safe": 1,
+          "Drawer": 5,
+          "DiningTable": 1,
+          "Chair": 1
+        }
+      }
+    },
+    "FloorPlan19": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 5
+        },
+        "CLOSE": {
+          "Drawer": 5
+        },
+        "RECEPTACLE": {
+          "Drawer": 5,
+          "DiningTable": 1,
+          "Chair": 1
+        }
+      }
+    },
+    "FloorPlan20": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 1
+        },
+        "CLOSE": {
+          "Drawer": 1
+        },
+        "GRASP": {
+          "Vase": 4,
+          "Ladle": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 1,
+          "DiningTable": 1,
+          "Shelf": 5,
+          "Stool": 1
+        }
+      }
+    },
+    "FloorPlan21": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 1,
+          "Blinds": 1
+        },
+        "CLOSE": {
+          "Drawer": 1,
+          "Blinds": 1
+        },
+        "GRASP": {
+          "AluminumFoil": 3
+        },
+        "RECEPTACLE": {
+          "Drawer": 1,
+          "DiningTable": 3,
+          "Chair": 1,
+          "Shelf": 4,
+          "SideTable": 1
+        }
+      }
+    },
+    "FloorPlan22": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 3,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 3,
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Kettle": 1,
+          "CreditCard": 1
+        },
+        "RECEPTACLE": {
+          "Stool": 2,
+          "Drawer": 3
+        }
+      }
+    },
+    "FloorPlan23": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 2,
+          "Blinds": 1
+        },
+        "CLOSE": {
+          "Drawer": 2,
+          "Blinds": 1
+        },
+        "GRASP": {
+          "Pen": 1,
+          "Bottle": 1,
+          "Pencil": 1,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 2,
+          "DiningTable": 1,
+          "Chair": 2,
+          "Shelf": 2
+        }
+      }
+    },
+    "FloorPlan24": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 4
+        },
+        "CLOSE": {
+          "Drawer": 4
+        },
+        "GRASP": {
+          "PaperTowelRoll": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 4,
+          "DiningTable": 1,
+          "Stool": 1
+        }
+      }
+    },
+    "FloorPlan25": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 5
+        },
+        "CLOSE": {
+          "Drawer": 5
+        },
+        "GRASP": {
+          "Ladle": 1
+        },
+        "RECEPTACLE": {
+          "Stool": 1,
+          "Drawer": 5
+        }
+      }
+    },
+    "FloorPlan26": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 3
+        },
+        "CLOSE": {
+          "Drawer": 3
+        },
+        "RECEPTACLE": {
+          "Drawer": 3,
+          "DiningTable": 2
+        }
+      }
+    },
+    "FloorPlan27": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 3
+        },
+        "CLOSE": {
+          "Drawer": 3
+        },
+        "GRASP": {
+          "Ladle": 2,
+          "WineBottle": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 3,
+          "DiningTable": 1,
+          "Chair": 1
+        }
+      }
+    },
+    "FloorPlan28": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 3,
+          "Blinds": 1
+        },
+        "CLOSE": {
+          "Drawer": 3,
+          "Blinds": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 3,
+          "DiningTable": 2,
+          "Shelf": 2,
+          "SideTable": 1
+        }
+      }
+    },
+    "FloorPlan29": {
+      "actions": {
+        "OPEN": {
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Kettle": 1
+        },
+        "GRASP": {
+          "Kettle": 1
+        },
+        "RECEPTACLE": {
+          "Chair": 3
+        }
+      }
+    },
+    "FloorPlan30": {
+      "actions": {
+        "OPEN": {
+          "Drawer": 27,
+          "Kettle": 1
+        },
+        "CLOSE": {
+          "Drawer": 27,
+          "Kettle": 1
+        },
+        "TOGGLE_ON": {
+          "CellPhone": 1
+        },
+        "TOGGLE_OFF": {
+          "CellPhone": 1
+        },
+        "GRASP": {
+          "Ladle": 1,
+          "Bottle": 1,
+          "Kettle": 1,
+          "CellPhone": 1
+        },
+        "RECEPTACLE": {
+          "Drawer": 27
+        }
+      }
+    }
+  }
+}

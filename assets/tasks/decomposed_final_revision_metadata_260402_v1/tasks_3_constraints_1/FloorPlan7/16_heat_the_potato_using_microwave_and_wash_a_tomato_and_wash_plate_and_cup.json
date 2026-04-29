@@ -1,0 +1,213 @@
+[
+  {
+    "Task": "Heat Potato using Microwave",
+    "Subtasks": [
+      {
+        "Name": "Place Potato in Microwave",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Potato|+00.22|+01.16|+02.16": 1,
+            "Microwave|+01.15|+01.66|-01.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Potato|+00.22|+01.16|+02.16",
+            "GRASP Potato|+00.22|+01.16|+02.16",
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "OPEN Microwave|+01.15|+01.66|-01.61",
+            "PLACE_INSIDE Microwave|+01.15|+01.66|-01.61",
+            "CLOSE Microwave|+01.15|+01.66|-01.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Microwave for Heating Potato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|+01.15|+01.66|-01.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "TOGGLE_ON Microwave|+01.15|+01.66|-01.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Potato in Microwave",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Microwave after Heating Potato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|+01.15|+01.66|-01.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "TOGGLE_OFF Microwave|+01.15|+01.66|-01.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Microwave for Heating Potato",
+            "Interval": 5,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Heated Potato and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Potato|+00.22|+01.16|+02.16": 1,
+            "Microwave|+01.15|+01.66|-01.61": 1,
+            "CounterTop|-01.87|+00.95|-00.61": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|+01.15|+01.66|-01.61",
+            "OPEN Microwave|+01.15|+01.66|-01.61",
+            "GRASP Potato|+00.22|+01.16|+02.16",
+            "CLOSE Microwave|+01.15|+01.66|-01.61",
+            "NAVIGATE_TO CounterTop|-01.87|+00.95|-00.61",
+            "PLACE_ON_TOP CounterTop|-01.87|+00.95|-00.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Microwave after Heating Potato",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Wash Tomato, Plate, and Cup",
+    "Subtasks": [
+      {
+        "Name": "Wash Tomato",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Tomato|+00.17|+00.83|+02.03": 1,
+            "Sink|+00.02|+00.77|-01.71|SinkBasin": 1,
+            "Faucet|-00.11|+00.92|-01.82": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Tomato|+00.17|+00.83|+02.03",
+            "GRASP Tomato|+00.17|+00.83|+02.03",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "PLACE_INSIDE Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "NAVIGATE_TO Faucet|-00.11|+00.92|-01.82",
+            "TOGGLE_ON Faucet|-00.11|+00.92|-01.82",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-00.11|+00.92|-01.82",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "GRASP Tomato|+00.17|+00.83|+02.03",
+            "NAVIGATE_TO CounterTop|-01.87|+00.95|-00.61",
+            "PLACE_ON_TOP CounterTop|-01.87|+00.95|-00.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Wash Plate",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Plate|+00.14|+00.92|-01.50": 1,
+            "Sink|+00.02|+00.77|-01.71|SinkBasin": 1,
+            "Faucet|-00.11|+00.92|-01.82": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Plate|+00.14|+00.92|-01.50",
+            "GRASP Plate|+00.14|+00.92|-01.50",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "PLACE_INSIDE Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "NAVIGATE_TO Faucet|-00.11|+00.92|-01.82",
+            "TOGGLE_ON Faucet|-00.11|+00.92|-01.82",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-00.11|+00.92|-01.82",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "GRASP Plate|+00.14|+00.92|-01.50",
+            "NAVIGATE_TO CounterTop|-01.87|+00.95|-00.61",
+            "PLACE_ON_TOP CounterTop|-01.87|+00.95|-00.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Wash Cup",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Cup|-01.91|+00.90|-00.02": 1,
+            "Sink|+00.02|+00.77|-01.71|SinkBasin": 1,
+            "Faucet|-00.11|+00.92|-01.82": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Cup|-01.91|+00.90|-00.02",
+            "GRASP Cup|-01.91|+00.90|-00.02",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "PLACE_INSIDE Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "NAVIGATE_TO Faucet|-00.11|+00.92|-01.82",
+            "TOGGLE_ON Faucet|-00.11|+00.92|-01.82",
+            "WAIT 1.0",
+            "TOGGLE_OFF Faucet|-00.11|+00.92|-01.82",
+            "NAVIGATE_TO Sink|+00.02|+00.77|-01.71|SinkBasin",
+            "GRASP Cup|-01.91|+00.90|-00.02",
+            "NAVIGATE_TO CounterTop|-01.87|+00.95|-00.61",
+            "PLACE_ON_TOP CounterTop|-01.87|+00.95|-00.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 7
+        },
+        "TemporalConstraints": []
+      }
+    ]
+  }
+]

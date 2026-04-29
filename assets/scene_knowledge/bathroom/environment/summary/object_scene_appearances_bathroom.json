@@ -1,0 +1,235 @@
+{
+  "ShowerCurtain": {
+    "count": 13,
+    "scenes": [
+      "FloorPlan401",
+      "FloorPlan404",
+      "FloorPlan405",
+      "FloorPlan407",
+      "FloorPlan408",
+      "FloorPlan415",
+      "FloorPlan419",
+      "FloorPlan420",
+      "FloorPlan422",
+      "FloorPlan423",
+      "FloorPlan426",
+      "FloorPlan427",
+      "FloorPlan429"
+    ]
+  },
+  "SideTable": {
+    "count": 5,
+    "scenes": [
+      "FloorPlan401",
+      "FloorPlan419",
+      "FloorPlan420",
+      "FloorPlan429",
+      "FloorPlan430"
+    ]
+  },
+  "PaperTowelRoll": {
+    "count": 4,
+    "scenes": [
+      "FloorPlan401",
+      "FloorPlan403",
+      "FloorPlan414",
+      "FloorPlan427"
+    ]
+  },
+  "ShowerHead": {
+    "count": 24,
+    "scenes": [
+      "FloorPlan401",
+      "FloorPlan402",
+      "FloorPlan403",
+      "FloorPlan404",
+      "FloorPlan407",
+      "FloorPlan409",
+      "FloorPlan410",
+      "FloorPlan411",
+      "FloorPlan412",
+      "FloorPlan413",
+      "FloorPlan415",
+      "FloorPlan416",
+      "FloorPlan417",
+      "FloorPlan418",
+      "FloorPlan419",
+      "FloorPlan421",
+      "FloorPlan422",
+      "FloorPlan423",
+      "FloorPlan424",
+      "FloorPlan425",
+      "FloorPlan426",
+      "FloorPlan427",
+      "FloorPlan428",
+      "FloorPlan430"
+    ]
+  },
+  "Shelf": {
+    "count": 7,
+    "scenes": [
+      "FloorPlan401",
+      "FloorPlan402",
+      "FloorPlan403",
+      "FloorPlan404",
+      "FloorPlan415",
+      "FloorPlan422",
+      "FloorPlan430"
+    ]
+  },
+  "DishSponge": {
+    "count": 6,
+    "scenes": [
+      "FloorPlan401",
+      "FloorPlan403",
+      "FloorPlan414",
+      "FloorPlan421",
+      "FloorPlan427",
+      "FloorPlan430"
+    ]
+  },
+  "Bathtub": {
+    "count": 20,
+    "scenes": [
+      "FloorPlan401",
+      "FloorPlan402",
+      "FloorPlan403",
+      "FloorPlan404",
+      "FloorPlan405",
+      "FloorPlan406",
+      "FloorPlan407",
+      "FloorPlan408",
+      "FloorPlan410",
+      "FloorPlan411",
+      "FloorPlan413",
+      "FloorPlan414",
+      "FloorPlan415",
+      "FloorPlan419",
+      "FloorPlan420",
+      "FloorPlan422",
+      "FloorPlan423",
+      "FloorPlan426",
+      "FloorPlan427",
+      "FloorPlan429"
+    ]
+  },
+  "CounterTop": {
+    "count": 25,
+    "scenes": [
+      "FloorPlan402",
+      "FloorPlan403",
+      "FloorPlan405",
+      "FloorPlan406",
+      "FloorPlan407",
+      "FloorPlan408",
+      "FloorPlan409",
+      "FloorPlan410",
+      "FloorPlan411",
+      "FloorPlan412",
+      "FloorPlan413",
+      "FloorPlan414",
+      "FloorPlan415",
+      "FloorPlan416",
+      "FloorPlan417",
+      "FloorPlan418",
+      "FloorPlan421",
+      "FloorPlan422",
+      "FloorPlan423",
+      "FloorPlan424",
+      "FloorPlan425",
+      "FloorPlan426",
+      "FloorPlan427",
+      "FloorPlan428",
+      "FloorPlan430"
+    ]
+  },
+  "ShowerDoor": {
+    "count": 17,
+    "scenes": [
+      "FloorPlan402",
+      "FloorPlan403",
+      "FloorPlan407",
+      "FloorPlan409",
+      "FloorPlan410",
+      "FloorPlan411",
+      "FloorPlan412",
+      "FloorPlan413",
+      "FloorPlan416",
+      "FloorPlan417",
+      "FloorPlan418",
+      "FloorPlan421",
+      "FloorPlan423",
+      "FloorPlan424",
+      "FloorPlan425",
+      "FloorPlan428",
+      "FloorPlan430"
+    ]
+  },
+  "Cabinet": {
+    "count": 15,
+    "scenes": [
+      "FloorPlan402",
+      "FloorPlan403",
+      "FloorPlan405",
+      "FloorPlan406",
+      "FloorPlan407",
+      "FloorPlan408",
+      "FloorPlan412",
+      "FloorPlan413",
+      "FloorPlan414",
+      "FloorPlan417",
+      "FloorPlan418",
+      "FloorPlan422",
+      "FloorPlan424",
+      "FloorPlan425",
+      "FloorPlan428"
+    ]
+  },
+  "TissueBox": {
+    "count": 9,
+    "scenes": [
+      "FloorPlan402",
+      "FloorPlan404",
+      "FloorPlan419",
+      "FloorPlan422",
+      "FloorPlan425",
+      "FloorPlan426",
+      "FloorPlan427",
+      "FloorPlan429",
+      "FloorPlan430"
+    ]
+  },
+  "Drawer": {
+    "count": 15,
+    "scenes": [
+      "FloorPlan409",
+      "FloorPlan410",
+      "FloorPlan411",
+      "FloorPlan413",
+      "FloorPlan414",
+      "FloorPlan415",
+      "FloorPlan416",
+      "FloorPlan419",
+      "FloorPlan420",
+      "FloorPlan421",
+      "FloorPlan422",
+      "FloorPlan423",
+      "FloorPlan426",
+      "FloorPlan427",
+      "FloorPlan430"
+    ]
+  },
+  "Dresser": {
+    "count": 2,
+    "scenes": [
+      "FloorPlan413",
+      "FloorPlan415"
+    ]
+  },
+  "Footstool": {
+    "count": 1,
+    "scenes": [
+      "FloorPlan430"
+    ]
+  }
+}

@@ -1,0 +1,335 @@
+{
+    "metadata": {
+        "date": "2026-04-02, 14:08:02",
+        "generation_criteria": "tasks_and_constraints_count",
+        "task_counts": [
+            2,
+            3,
+            4
+        ],
+        "constraint_counts": [
+            0,
+            1,
+            2
+        ],
+        "instruction_counts_by_case": {
+            "tasks_2_constraints_0": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_2_constraints_1": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_2_constraints_2": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_3_constraints_0": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_3_constraints_1": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_3_constraints_2": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_4_constraints_0": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_4_constraints_1": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            },
+            "tasks_4_constraints_2": {
+                "common": 18,
+                "FloorPlan1": 0,
+                "FloorPlan7": 0,
+                "FloorPlan13": 0,
+                "FloorPlan18": 0,
+                "FloorPlan27": 0
+            }
+        }
+    },
+    "instructions_by_case": {
+        "tasks_2_constraints_0": {
+            "common": [
+                "put_apple_and_lettuce_in_fridge and wash_a_butterknife",
+                "put_apple_and_lettuce_in_fridge and wash_a_spatula",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato",
+                "put_apple_and_lettuce_in_fridge and wash_all_fork_and_spoon",
+                "put_apple_and_lettuce_in_fridge and wash_plate_and_cup",
+                "wash_a_butterknife and wash_all_fork_and_spoon",
+                "wash_a_butterknife and wash_apple_and_lettuce",
+                "wash_a_butterknife and wash_plate_and_cup",
+                "wash_a_spatula and wash_all_fork_and_spoon",
+                "wash_a_spatula and wash_apple_and_lettuce",
+                "wash_a_spatula and wash_plate_and_cup",
+                "wash_a_tomato and wash_a_butterknife",
+                "wash_a_tomato and wash_a_spatula",
+                "wash_a_tomato and wash_all_fork_and_spoon",
+                "wash_a_tomato and wash_apple_and_lettuce",
+                "wash_a_tomato and wash_plate_and_cup",
+                "wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_plate_and_cup and wash_apple_and_lettuce"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_2_constraints_1": {
+            "common": [
+                "boil_potato and put_apple_and_lettuce_in_fridge",
+                "boil_water_with_pot and put_apple_and_lettuce_in_fridge",
+                "cook_egg and put_apple_and_lettuce_in_fridge",
+                "cook_egg and wash_a_butterknife",
+                "cook_egg and wash_a_spatula",
+                "fill_bowl_with_water and put_apple_and_lettuce_in_fridge",
+                "heat_the_bread_using_microwave and wash_a_spatula",
+                "heat_the_bread_using_microwave and wash_all_fork_and_spoon",
+                "heat_the_bread_using_microwave and wash_apple_and_lettuce",
+                "heat_the_bread_using_microwave and wash_plate_and_cup",
+                "heat_the_potato_using_microwave and wash_a_tomato",
+                "heat_the_potato_using_microwave and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and wash_apple_and_lettuce",
+                "heat_the_potato_using_microwave and wash_plate_and_cup",
+                "make_a_coffee and put_apple_and_lettuce_in_fridge",
+                "make_a_coffee and wash_a_spatula",
+                "make_a_coffee and wash_a_tomato",
+                "make_a_coffee and wash_apple_and_lettuce"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_2_constraints_2": {
+            "common": [
+                "boil_potato and heat_the_bread_using_microwave",
+                "boil_potato and make_a_coffee",
+                "boil_water_with_pot and heat_the_bread_using_microwave",
+                "boil_water_with_pot and heat_the_potato_using_microwave",
+                "boil_water_with_pot and make_a_coffee",
+                "fill_bowl_with_water and cook_egg",
+                "fill_bowl_with_water and heat_the_bread_using_microwave",
+                "fill_bowl_with_water and heat_the_potato_using_microwave",
+                "fill_bowl_with_water and make_a_coffee",
+                "fill_pot_with_water and cook_egg",
+                "fill_pot_with_water and heat_the_bread_using_microwave",
+                "fill_pot_with_water and heat_the_potato_using_microwave",
+                "fill_pot_with_water and make_a_coffee",
+                "heat_the_bread_using_microwave and cook_egg",
+                "heat_the_bread_using_microwave and make_a_coffee",
+                "heat_the_potato_using_microwave and cook_egg",
+                "heat_the_potato_using_microwave and make_a_coffee",
+                "make_a_coffee and cook_egg"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_3_constraints_0": {
+            "common": [
+                "put_apple_and_lettuce_in_fridge and wash_a_butterknife and wash_a_spatula",
+                "put_apple_and_lettuce_in_fridge and wash_a_butterknife and wash_all_fork_and_spoon",
+                "put_apple_and_lettuce_in_fridge and wash_a_butterknife and wash_plate_and_cup",
+                "put_apple_and_lettuce_in_fridge and wash_a_spatula and wash_all_fork_and_spoon",
+                "put_apple_and_lettuce_in_fridge and wash_a_spatula and wash_plate_and_cup",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_butterknife",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_spatula",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_all_fork_and_spoon",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_plate_and_cup",
+                "put_apple_and_lettuce_in_fridge and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_a_butterknife and wash_all_fork_and_spoon and wash_apple_and_lettuce",
+                "wash_a_butterknife and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_a_butterknife and wash_plate_and_cup and wash_apple_and_lettuce",
+                "wash_a_spatula and wash_all_fork_and_spoon and wash_apple_and_lettuce",
+                "wash_a_spatula and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_a_tomato and wash_a_butterknife and wash_all_fork_and_spoon",
+                "wash_a_tomato and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_a_tomato and wash_plate_and_cup and wash_apple_and_lettuce"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_3_constraints_1": {
+            "common": [
+                "cook_egg and wash_a_butterknife and wash_apple_and_lettuce",
+                "cook_egg and wash_a_spatula and wash_apple_and_lettuce",
+                "cook_egg and wash_a_tomato and wash_all_fork_and_spoon",
+                "cook_egg and wash_all_fork_and_spoon and wash_apple_and_lettuce",
+                "heat_the_bread_using_microwave and put_apple_and_lettuce_in_fridge and wash_all_fork_and_spoon",
+                "heat_the_bread_using_microwave and wash_a_butterknife and wash_all_fork_and_spoon",
+                "heat_the_bread_using_microwave and wash_a_butterknife and wash_plate_and_cup",
+                "heat_the_bread_using_microwave and wash_a_spatula and wash_plate_and_cup",
+                "heat_the_bread_using_microwave and wash_a_tomato and wash_a_spatula",
+                "heat_the_bread_using_microwave and wash_a_tomato and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_butterknife",
+                "heat_the_potato_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_spatula",
+                "heat_the_potato_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_tomato",
+                "heat_the_potato_using_microwave and wash_a_butterknife and wash_a_spatula",
+                "heat_the_potato_using_microwave and wash_a_spatula and wash_plate_and_cup",
+                "heat_the_potato_using_microwave and wash_a_tomato and wash_plate_and_cup",
+                "make_a_coffee and wash_a_butterknife and wash_apple_and_lettuce",
+                "make_a_coffee and wash_a_spatula and wash_apple_and_lettuce"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_3_constraints_2": {
+            "common": [
+                "boil_potato and heat_the_bread_using_microwave and put_apple_and_lettuce_in_fridge",
+                "boil_potato and make_a_coffee and put_apple_and_lettuce_in_fridge",
+                "boil_water_with_pot and make_a_coffee and put_apple_and_lettuce_in_fridge",
+                "fill_bowl_with_water and cook_egg and put_apple_and_lettuce_in_fridge",
+                "fill_bowl_with_water and heat_the_bread_using_microwave and put_apple_and_lettuce_in_fridge",
+                "fill_bowl_with_water and make_a_coffee and put_apple_and_lettuce_in_fridge",
+                "fill_pot_with_water and cook_egg and put_apple_and_lettuce_in_fridge",
+                "heat_the_bread_using_microwave and cook_egg and wash_plate_and_cup",
+                "heat_the_bread_using_microwave and make_a_coffee and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and cook_egg and wash_a_spatula",
+                "heat_the_potato_using_microwave and cook_egg and wash_a_tomato",
+                "heat_the_potato_using_microwave and cook_egg and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and cook_egg and wash_plate_and_cup",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_a_butterknife",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_a_tomato",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_apple_and_lettuce",
+                "make_a_coffee and cook_egg and wash_a_spatula"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_4_constraints_0": {
+            "common": [
+                "put_apple_and_lettuce_in_fridge and wash_a_butterknife and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_butterknife and wash_all_fork_and_spoon",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_butterknife and wash_plate_and_cup",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_spatula and wash_all_fork_and_spoon",
+                "put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_a_butterknife and wash_a_spatula and wash_all_fork_and_spoon and wash_apple_and_lettuce",
+                "wash_a_butterknife and wash_a_spatula and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_a_butterknife and wash_a_spatula and wash_plate_and_cup and wash_apple_and_lettuce",
+                "wash_a_butterknife and wash_all_fork_and_spoon and wash_plate_and_cup and wash_apple_and_lettuce",
+                "wash_a_spatula and wash_all_fork_and_spoon and wash_plate_and_cup and wash_apple_and_lettuce",
+                "wash_a_tomato and wash_a_butterknife and wash_a_spatula and wash_all_fork_and_spoon",
+                "wash_a_tomato and wash_a_butterknife and wash_a_spatula and wash_apple_and_lettuce",
+                "wash_a_tomato and wash_a_butterknife and wash_a_spatula and wash_plate_and_cup",
+                "wash_a_tomato and wash_a_butterknife and wash_all_fork_and_spoon and wash_apple_and_lettuce",
+                "wash_a_tomato and wash_a_butterknife and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "wash_a_tomato and wash_a_butterknife and wash_plate_and_cup and wash_apple_and_lettuce",
+                "wash_a_tomato and wash_a_spatula and wash_all_fork_and_spoon and wash_apple_and_lettuce",
+                "wash_a_tomato and wash_all_fork_and_spoon and wash_plate_and_cup and wash_apple_and_lettuce"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_4_constraints_1": {
+            "common": [
+                "cook_egg and put_apple_and_lettuce_in_fridge and wash_a_butterknife and wash_all_fork_and_spoon",
+                "cook_egg and put_apple_and_lettuce_in_fridge and wash_a_spatula and wash_all_fork_and_spoon",
+                "cook_egg and put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_spatula",
+                "cook_egg and wash_a_butterknife and wash_plate_and_cup and wash_apple_and_lettuce",
+                "heat_the_bread_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_butterknife and wash_plate_and_cup",
+                "heat_the_bread_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_spatula and wash_plate_and_cup",
+                "heat_the_bread_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_spatula",
+                "heat_the_bread_using_microwave and wash_a_tomato and wash_a_butterknife and wash_all_fork_and_spoon",
+                "heat_the_bread_using_microwave and wash_a_tomato and wash_a_butterknife and wash_plate_and_cup",
+                "heat_the_bread_using_microwave and wash_a_tomato and wash_a_spatula and wash_all_fork_and_spoon",
+                "heat_the_bread_using_microwave and wash_a_tomato and wash_all_fork_and_spoon and wash_apple_and_lettuce",
+                "heat_the_potato_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_a_spatula",
+                "heat_the_potato_using_microwave and put_apple_and_lettuce_in_fridge and wash_a_tomato and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and wash_a_butterknife and wash_a_spatula and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and wash_a_butterknife and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "make_a_coffee and wash_a_tomato and wash_a_butterknife and wash_apple_and_lettuce",
+                "make_a_coffee and wash_a_tomato and wash_all_fork_and_spoon and wash_plate_and_cup",
+                "make_a_coffee and wash_a_tomato and wash_plate_and_cup and wash_apple_and_lettuce"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        },
+        "tasks_4_constraints_2": {
+            "common": [
+                "heat_the_bread_using_microwave and cook_egg and put_apple_and_lettuce_in_fridge and wash_all_fork_and_spoon",
+                "heat_the_bread_using_microwave and cook_egg and wash_a_butterknife and wash_a_spatula",
+                "heat_the_bread_using_microwave and cook_egg and wash_a_tomato and wash_a_spatula",
+                "heat_the_bread_using_microwave and cook_egg and wash_a_tomato and wash_apple_and_lettuce",
+                "heat_the_bread_using_microwave and make_a_coffee and put_apple_and_lettuce_in_fridge and wash_a_butterknife",
+                "heat_the_bread_using_microwave and make_a_coffee and put_apple_and_lettuce_in_fridge and wash_a_spatula",
+                "heat_the_bread_using_microwave and make_a_coffee and wash_a_spatula and wash_apple_and_lettuce",
+                "heat_the_potato_using_microwave and cook_egg and wash_a_tomato and wash_a_spatula",
+                "heat_the_potato_using_microwave and make_a_coffee and put_apple_and_lettuce_in_fridge and wash_a_butterknife",
+                "heat_the_potato_using_microwave and make_a_coffee and put_apple_and_lettuce_in_fridge and wash_a_spatula",
+                "heat_the_potato_using_microwave and make_a_coffee and put_apple_and_lettuce_in_fridge and wash_plate_and_cup",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_a_butterknife and wash_all_fork_and_spoon",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_a_butterknife and wash_apple_and_lettuce",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_a_butterknife and wash_plate_and_cup",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_a_tomato and wash_a_butterknife",
+                "heat_the_potato_using_microwave and make_a_coffee and wash_a_tomato and wash_all_fork_and_spoon",
+                "make_a_coffee and cook_egg and put_apple_and_lettuce_in_fridge and wash_a_tomato",
+                "make_a_coffee and cook_egg and wash_a_tomato and wash_a_spatula"
+            ],
+            "FloorPlan1": [],
+            "FloorPlan7": [],
+            "FloorPlan13": [],
+            "FloorPlan18": [],
+            "FloorPlan27": []
+        }
+    }
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "Task": "Fill Bowl with Water",
+    "Subtasks": [
+      {
+        "Name": "Place Bowl in Sink and Start Filling",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Bowl|-00.49|+00.91|+04.61": 1,
+            "Sink|-04.19|+00.92|+03.28|SinkBasin": 1,
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Bowl|-00.49|+00.91|+04.61",
+            "GRASP Bowl|-00.49|+00.91|+04.61",
+            "NAVIGATE_TO Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "PLACE_INSIDE Sink|-04.19|+00.92|+03.28|SinkBasin",
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_ON Faucet|-04.44|+00.91|+03.29"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 4
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Turn Off Faucet after Bowl is Filled",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Faucet|-04.44|+00.91|+03.29": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Faucet|-04.44|+00.91|+03.29",
+            "TOGGLE_OFF Faucet|-04.44|+00.91|+03.29"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Bowl in Sink and Start Filling",
+            "Interval": 1,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Cook Egg",
+    "Subtasks": [
+      {
+        "Name": "Prepare Pan on Stove and Heat",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan|-02.45|+00.93|+02.02": 1,
+            "StoveBurner|-02.92|+00.92|+02.01": 1,
+            "StoveKnob|-02.97|+01.10|+01.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan|-02.45|+00.93|+02.02",
+            "GRASP Pan|-02.45|+00.93|+02.02",
+            "NAVIGATE_TO StoveBurner|-02.92|+00.92|+02.01",
+            "PLACE_ON_TOP StoveBurner|-02.92|+00.92|+02.01",
+            "NAVIGATE_TO StoveKnob|-02.97|+01.10|+01.56",
+            "TOGGLE_ON StoveKnob|-02.97|+01.10|+01.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Cook Egg in Pan",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Egg|-04.07|+00.94|+02.81": 1,
+            "Pan|-02.45|+00.93|+02.02": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Egg|-04.07|+00.94|+02.81",
+            "GRASP Egg|-04.07|+00.94|+02.81",
+            "NAVIGATE_TO Pan|-02.45|+00.93|+02.02",
+            "PLACE_ON_TOP Pan|-02.45|+00.93|+02.02",
+            "SLICE Egg|-04.07|+00.94|+02.81"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Pan on Stove and Heat",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove After Cooking Egg",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "StoveKnob|-02.97|+01.10|+01.56": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO StoveKnob|-02.97|+01.10|+01.56",
+            "TOGGLE_OFF StoveKnob|-02.97|+01.10|+01.56"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Cook Egg in Pan",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Place Cooked Egg in Pan on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan|-02.45|+00.93|+02.02": 1,
+            "CounterTop|-04.26|+00.96|+04.94": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan|-02.45|+00.93|+02.02",
+            "GRASP Pan|-02.45|+00.93|+02.02",
+            "NAVIGATE_TO CounterTop|-04.26|+00.96|+04.94",
+            "PLACE_ON_TOP CounterTop|-04.26|+00.96|+04.94"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Stove After Cooking Egg",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  }
+]

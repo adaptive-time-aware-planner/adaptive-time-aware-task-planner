@@ -1,0 +1,53 @@
+max_workers: 6
+skip_completed: true
+timeout_seconds: 1200
+suite_name: "eta_sensitivity"
+
+approaches: ["bayesian"]
+ablation_configs: [DEFAULT]
+init_prior_configs:
+  - UNDER_ESTIMATE
+  - CORRECT_ESTIMATE
+  - OVER_ESTIMATE
+
+beam_bound:
+  # - [1, 1]
+  # - [5, 5]
+  - [10, 10]
+  # - [20, 20]
+etas:
+  # - 0.0  # mathematically undefined: norm.ppf(0.0) = -inf → trigger_time = -inf
+  - 0.01
+  - 0.1
+  # - 0.5
+  - 0.9
+
+gt_distribution: "constant"
+belief_update_method: "bayesian"
+gt_seed: 42
+
+scene_type: [kitchen]
+scene_lists:
+  kitchen:
+    - "FloorPlan1"
+    - "FloorPlan7"
+    - "FloorPlan13"
+    - "FloorPlan18"
+    - "FloorPlan27"
+
+cases:
+  - "tasks_2_constraints_1"
+  - "tasks_2_constraints_2"
+  - "tasks_3_constraints_1"
+  - "tasks_3_constraints_2"
+
+task_folder_name:
+  - "decomposed_final_revision_metadata_260402_v1"
+  - "decomposed_final_revision_metadata_260402_v2"
+  - "decomposed_final_revision_metadata_260402_v3"
+  - "decomposed_final_revision_metadata_260402_v4"
+  - "decomposed_final_revision_metadata_260402_v5"
+max_tasks: 18
+
+output_dir: "assets/results/offline_exp_result/offline_batch_eta_sensitivity"
+oracle_reference_dir: "assets/results/offline_oracle_reference"

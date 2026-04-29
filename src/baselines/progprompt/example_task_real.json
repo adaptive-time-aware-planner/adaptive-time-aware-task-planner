@@ -1,0 +1,4 @@
+{
+    "cook_chicken": "def cook_chicken():\n\t#0.Place Pan on Stove\n\tNAVIGATE_TO('Pan')\n\tGRASP('Pan')\n\tNAVIGATE_TO('Stove')\n\tPLACE_ON_TOP('Stove')\n\t#1.Place Chicken in Pan and Start Stove\n\tNAVIGATE_TO('Chicken')\n\tGRASP('Chicken')\n\tNAVIGATE_TO('Pan')\n\tPLACE_INSIDE('Pan')\n\tNAVIGATE_TO('Stove')\n\tTOGGLE_ON('Stove')\n\t#2.Wait untill chiken is cooked\n\twait(100.0)\n\t#3.Turn Off Stove after Cooking Chicken\n\tNAVIGATE_TO('Stove')\n\tTOGGLE_OFF('Stove')\n\t#4.Done",
+    "put orange bowl on sink": "def put_orange_bowl_on_sink():\n\t#0.Place Orange Bowl on Sink\n\tNAVIGATE_TO('Orange Bowl')\n\tGRASP('Orange Bowl')\n\tNAVIGATE_TO('Sink')\n\tPLACE_ON_TOP('Sink')\n\t#1.Done"
+}

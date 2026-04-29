@@ -1,0 +1,120 @@
+{
+  "FloorPlan201": {},
+  "FloorPlan202": {},
+  "FloorPlan203": {},
+  "FloorPlan204": {
+    "GRASP": {
+      "Vase": 4,
+      "Statue": 3
+    }
+  },
+  "FloorPlan205": {},
+  "FloorPlan206": {
+    "GRASP": {
+      "Vase": 4,
+      "Statue": 3
+    }
+  },
+  "FloorPlan207": {
+    "GRASP": {
+      "Vase": 3
+    }
+  },
+  "FloorPlan208": {
+    "GRASP": {
+      "Statue": 3
+    }
+  },
+  "FloorPlan209": {
+    "GRASP": {
+      "Vase": 4
+    }
+  },
+  "FloorPlan210": {},
+  "FloorPlan211": {
+    "GRASP": {
+      "Vase": 2
+    }
+  },
+  "FloorPlan212": {
+    "GRASP": {
+      "Statue": 2
+    }
+  },
+  "FloorPlan213": {},
+  "FloorPlan214": {
+    "GRASP": {
+      "Vase": 2,
+      "Statue": 3
+    }
+  },
+  "FloorPlan215": {
+    "TOGGLE_ON": {
+      "DeskLamp": 2
+    },
+    "GRASP": {
+      "Vase": 7,
+      "Statue": 5
+    }
+  },
+  "FloorPlan216": {
+    "GRASP": {
+      "Vase": 3,
+      "Statue": 2
+    }
+  },
+  "FloorPlan217": {},
+  "FloorPlan218": {},
+  "FloorPlan219": {
+    "TOGGLE_ON": {
+      "DeskLamp": 2,
+      "FloorLamp": 2
+    }
+  },
+  "FloorPlan220": {},
+  "FloorPlan221": {},
+  "FloorPlan222": {},
+  "FloorPlan223": {
+    "GRASP": {
+      "Vase": 2,
+      "Statue": 2
+    }
+  },
+  "FloorPlan224": {
+    "GRASP": {
+      "Vase": 2
+    }
+  },
+  "FloorPlan225": {
+    "GRASP": {
+      "Statue": 2
+    }
+  },
+  "FloorPlan226": {
+    "GRASP": {
+      "Statue": 2
+    }
+  },
+  "FloorPlan227": {
+    "GRASP": {
+      "Vase": 6,
+      "Statue": 7
+    }
+  },
+  "FloorPlan228": {},
+  "FloorPlan229": {
+    "GRASP": {
+      "Statue": 2
+    }
+  },
+  "FloorPlan230": {
+    "TOGGLE_ON": {
+      "DeskLamp": 2,
+      "Candle": 3
+    },
+    "GRASP": {
+      "Statue": 2,
+      "Candle": 3
+    }
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "Task": "Fill Pot with Water and Cook Egg",
+    "Subtasks": [
+      {
+        "Name": "Place Pot in Sink and Start Filling",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pot|+01.85|+00.93|+01.50": 1,
+            "Sink|+00.94|+00.94|+02.65|SinkBasin": 1,
+            "Faucet|+00.69|+00.93|+02.95": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pot|+01.85|+00.93|+01.50",
+            "GRASP Pot|+01.85|+00.93|+01.50",
+            "NAVIGATE_TO Sink|+00.94|+00.94|+02.65|SinkBasin",
+            "PLACE_INSIDE Sink|+00.94|+00.94|+02.65|SinkBasin",
+            "NAVIGATE_TO Faucet|+00.69|+00.93|+02.95",
+            "TOGGLE_ON Faucet|+00.69|+00.93|+02.95"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 4
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Turn Off Faucet after Pot is Filled",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Faucet|+00.69|+00.93|+02.95": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Faucet|+00.69|+00.93|+02.95",
+            "TOGGLE_OFF Faucet|+00.69|+00.93|+02.95"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Pot in Sink and Start Filling",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Place Pot on Stove and Start Heating",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pot|+01.85|+00.93|+01.50": 1,
+            "StoveBurner|+02.14|+00.93|+01.50": 1,
+            "StoveKnob|+02.33|+01.09|+01.46": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Sink|+00.94|+00.94|+02.65|SinkBasin",
+            "GRASP Pot|+01.85|+00.93|+01.50",
+            "NAVIGATE_TO StoveBurner|+02.14|+00.93|+01.50",
+            "PLACE_ON_TOP Pot|+01.85|+00.93|+01.50 StoveBurner|+02.14|+00.93|+01.50",
+            "NAVIGATE_TO StoveKnob|+02.33|+01.09|+01.46",
+            "TOGGLE_ON StoveKnob|+02.33|+01.09|+01.46"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 4
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Faucet after Pot is Filled",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Cook Egg in Pan",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Egg|+00.69|+00.83|+02.61": 1,
+            "Pan|+01.93|+00.07|+00.64": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Egg|+00.69|+00.83|+02.61",
+            "GRASP Egg|+00.69|+00.83|+02.61",
+            "NAVIGATE_TO Pan|+01.93|+00.07|+00.64",
+            "PLACE_ON_TOP Pan|+01.93|+00.07|+00.64",
+            "SLICE Egg|+00.69|+00.83|+02.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Pot on Stove and Start Heating",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove after Cooking Egg",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "StoveKnob|+02.33|+01.09|+01.46": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO StoveKnob|+02.33|+01.09|+01.46",
+            "TOGGLE_OFF StoveKnob|+02.33|+01.09|+01.46"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Cook Egg in Pan",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  }
+]

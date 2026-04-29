@@ -1,0 +1,13 @@
+{
+    "NAVIGATE_TO": 10,
+    "GRASP": 15,
+    "PLACE_ON_TOP": 16,
+    "PLACE_INSIDE": 17,
+    "TOGGLE_ON": 18,
+    "TOGGLE_OFF": 19,
+    "MONITORING": 20,
+    "SLICE": 21,
+    "OPEN": 22,
+    "CLOSE": 23
+}
+

@@ -1,0 +1,36 @@
+{
+    "OPEN": [],
+    "CLOSE": [],
+    "TOGGLE_ON": [
+        "Stove",
+        "tea_pot"
+    ],
+    "TOGGLE_OFF": [
+        "Stove",
+        "tea_pot"
+    ],
+    "GRASP": [
+        "Banana",
+        "Sausage",
+        "Pan",
+        "green_cup",
+        "Plate",
+        "purple_bowl",
+        "orange_bowl",
+        "tea_cup",
+        "Tomato",
+        "carrot",
+        "blue_pot"
+    ],
+    "RECEPTACLE": [
+        "Pan",
+        "purple_bowl",
+        "orange_bowl",
+        "Table",
+        "Sink",
+        "Stove",
+        "blue_pot",
+        "Plate",
+        "tea_pot"
+    ]
+}

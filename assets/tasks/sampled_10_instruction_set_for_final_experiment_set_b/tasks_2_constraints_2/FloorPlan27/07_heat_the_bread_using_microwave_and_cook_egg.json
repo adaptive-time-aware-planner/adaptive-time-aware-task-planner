@@ -1,0 +1,230 @@
+[
+  {
+    "Task": "Heat Bread using Microwave",
+    "Subtasks": [
+      {
+        "Name": "Place Bread in Microwave",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Bread|-00.25|+00.80|+00.81": 1,
+            "Microwave|-00.31|+00.93|+02.08": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Bread|-00.25|+00.80|+00.81",
+            "GRASP Bread|-00.25|+00.80|+00.81",
+            "NAVIGATE_TO Microwave|-00.31|+00.93|+02.08",
+            "OPEN Microwave|-00.31|+00.93|+02.08",
+            "PLACE_INSIDE Microwave|-00.31|+00.93|+02.08",
+            "CLOSE Microwave|-00.31|+00.93|+02.08"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Start Microwave for Heating Bread",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|-00.31|+00.93|+02.08": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-00.31|+00.93|+02.08",
+            "TOGGLE_ON Microwave|-00.31|+00.93|+02.08"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Place Bread in Microwave",
+            "Interval": 0,
+            "Urgency": false
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Microwave after Heating Bread",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Microwave|-00.31|+00.93|+02.08": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-00.31|+00.93|+02.08",
+            "TOGGLE_OFF Microwave|-00.31|+00.93|+02.08"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Start Microwave for Heating Bread",
+            "Interval": 5,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Retrieve Heated Bread and Place on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Bread|-00.25|+00.80|+00.81": 1,
+            "Microwave|-00.31|+00.93|+02.08": 1,
+            "CounterTop|+02.06|+00.97|+00.58": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Microwave|-00.31|+00.93|+02.08",
+            "OPEN Microwave|-00.31|+00.93|+02.08",
+            "GRASP Bread|-00.25|+00.80|+00.81",
+            "CLOSE Microwave|-00.31|+00.93|+02.08",
+            "NAVIGATE_TO CounterTop|+02.06|+00.97|+00.58",
+            "PLACE_ON_TOP CounterTop|+02.06|+00.97|+00.58"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Microwave after Heating Bread",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Task": "Cook Egg",
+    "Subtasks": [
+      {
+        "Name": "Prepare Pan on Stove and Heat",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan|+01.93|+00.07|+00.64": 1,
+            "StoveBurner|+02.14|+00.93|+01.50": 1,
+            "StoveKnob|+02.33|+01.09|+01.46": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan|+01.93|+00.07|+00.64",
+            "GRASP Pan|+01.93|+00.07|+00.64",
+            "NAVIGATE_TO StoveBurner|+02.14|+00.93|+01.50",
+            "PLACE_ON_TOP StoveBurner|+02.14|+00.93|+01.50",
+            "NAVIGATE_TO StoveKnob|+02.33|+01.09|+01.46",
+            "TOGGLE_ON StoveKnob|+02.33|+01.09|+01.46"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": []
+      },
+      {
+        "Name": "Cook Egg in Pan",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Egg|+00.69|+00.83|+02.61": 1,
+            "Pan|+01.93|+00.07|+00.64": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Egg|+00.69|+00.83|+02.61",
+            "GRASP Egg|+00.69|+00.83|+02.61",
+            "NAVIGATE_TO Pan|+01.93|+00.07|+00.64",
+            "PLACE_ON_TOP Pan|+01.93|+00.07|+00.64",
+            "SLICE Egg|+00.69|+00.83|+02.61"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 3
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Prepare Pan on Stove and Heat",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Turn Off Stove After Cooking Egg",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "StoveKnob|+02.33|+01.09|+01.46": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO StoveKnob|+02.33|+01.09|+01.46",
+            "TOGGLE_OFF StoveKnob|+02.33|+01.09|+01.46"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 1
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Cook Egg in Pan",
+            "Interval": 10,
+            "Urgency": true
+          }
+        ]
+      },
+      {
+        "Name": "Place Cooked Egg in Pan on CounterTop",
+        "Repetition": 1,
+        "Type": "Interaction",
+        "Executions": {
+          "Objects": {
+            "Pan|+01.93|+00.07|+00.64": 1,
+            "CounterTop|+02.06|+00.97|+00.58": 1
+          },
+          "PrimitiveActions": [
+            "NAVIGATE_TO Pan|+01.93|+00.07|+00.64",
+            "GRASP Pan|+01.93|+00.07|+00.64",
+            "NAVIGATE_TO CounterTop|+02.06|+00.97|+00.58",
+            "PLACE_ON_TOP CounterTop|+02.06|+00.97|+00.58"
+          ]
+        },
+        "Duration": {
+          "Type": "Controllable",
+          "Interval": 2
+        },
+        "TemporalConstraints": [
+          {
+            "Type": "After",
+            "Subtask": "Turn Off Stove After Cooking Egg",
+            "Interval": 0,
+            "Urgency": true
+          }
+        ]
+      }
+    ]
+  }
+]

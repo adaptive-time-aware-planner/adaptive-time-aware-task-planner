@@ -1,0 +1,94 @@
+{
+  "total_scenes": 60,
+  "interactions": {
+    "CLOSE": {
+      "objects": [
+        "Cabinet",
+        "Fridge",
+        "Microwave"
+      ]
+    },
+    "GRASP": {
+      "objects": [
+        "Apple",
+        "Bowl",
+        "Bread",
+        "ButterKnife",
+        "Cup",
+        "DishSponge",
+        "Egg",
+        "Fork",
+        "Knife",
+        "Lettuce",
+        "Mug",
+        "Pan",
+        "PepperShaker",
+        "Plate",
+        "Pot",
+        "Potato",
+        "SaltShaker",
+        "SoapBottle",
+        "Spatula",
+        "Spoon",
+        "Tomato"
+      ]
+    },
+    "OPEN": {
+      "objects": [
+        "Cabinet",
+        "Fridge",
+        "Microwave"
+      ]
+    },
+    "RECEPTACLE": {
+      "objects": [
+        "Bowl",
+        "Cabinet",
+        "CoffeeMachine",
+        "CounterTop",
+        "Cup",
+        "Floor",
+        "Fridge",
+        "GarbageCan",
+        "Microwave",
+        "Mug",
+        "Pan",
+        "Plate",
+        "Pot",
+        "Sink",
+        "StoveBurner",
+        "Toaster"
+      ]
+    },
+    "SLICE": {
+      "objects": [
+        "Apple",
+        "Bread",
+        "Egg",
+        "Lettuce",
+        "Potato",
+        "Tomato"
+      ]
+    },
+    "TOGGLE_OFF": {
+      "objects": [
+        "CoffeeMachine",
+        "Faucet",
+        "LightSwitch",
+        "Microwave",
+        "StoveKnob",
+        "Toaster"
+      ]
+    },
+    "TOGGLE_ON": {
+      "objects": [
+        "CoffeeMachine",
+        "Faucet",
+        "LightSwitch",
+        "Microwave",
+        "StoveKnob",
+        "Toaster"
+      ]
+    }
+  }
+}

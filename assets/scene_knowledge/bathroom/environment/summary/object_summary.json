@@ -1,0 +1,270 @@
+{
+  "total_scenes": 30,
+  "interactions": {
+    "CLOSE": {
+      "objects": {
+        "Toilet": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "ShowerCurtain": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 13
+        },
+        "ShowerDoor": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 17
+        },
+        "Drawer": {
+          "min_count": 1,
+          "max_count": 8,
+          "scene_count": 15
+        },
+        "Cabinet": {
+          "min_count": 2,
+          "max_count": 9,
+          "scene_count": 15
+        }
+      },
+      "unique_object_types": 5
+    },
+    "GRASP": {
+      "objects": {
+        "SoapBar": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "Plunger": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "ScrubBrush": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "SprayBottle": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "Cloth": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "HandTowel": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "Candle": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "TissueBox": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 9
+        },
+        "Towel": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "SoapBottle": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "ToiletPaper": {
+          "min_count": 2,
+          "max_count": 2,
+          "scene_count": 30
+        },
+        "DishSponge": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 6
+        },
+        "Footstool": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 1
+        },
+        "PaperTowelRoll": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 4
+        }
+      },
+      "unique_object_types": 14
+    },
+    "OPEN": {
+      "objects": {
+        "Toilet": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "ShowerCurtain": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 13
+        },
+        "ShowerDoor": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 17
+        },
+        "Drawer": {
+          "min_count": 1,
+          "max_count": 8,
+          "scene_count": 15
+        },
+        "Cabinet": {
+          "min_count": 2,
+          "max_count": 9,
+          "scene_count": 15
+        }
+      },
+      "unique_object_types": 5
+    },
+    "RECEPTACLE": {
+      "objects": {
+        "Bathtub": {
+          "min_count": 1,
+          "max_count": 2,
+          "scene_count": 20
+        },
+        "GarbageCan": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "Toilet": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "Shelf": {
+          "min_count": 1,
+          "max_count": 4,
+          "scene_count": 7
+        },
+        "ToiletPaperHanger": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "HandTowelHolder": {
+          "min_count": 1,
+          "max_count": 4,
+          "scene_count": 30
+        },
+        "Floor": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "Sink": {
+          "min_count": 1,
+          "max_count": 4,
+          "scene_count": 30
+        },
+        "TowelHolder": {
+          "min_count": 1,
+          "max_count": 2,
+          "scene_count": 30
+        },
+        "Drawer": {
+          "min_count": 1,
+          "max_count": 8,
+          "scene_count": 15
+        },
+        "SideTable": {
+          "min_count": 1,
+          "max_count": 3,
+          "scene_count": 5
+        },
+        "Footstool": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 1
+        },
+        "CounterTop": {
+          "min_count": 1,
+          "max_count": 2,
+          "scene_count": 25
+        },
+        "Cabinet": {
+          "min_count": 2,
+          "max_count": 9,
+          "scene_count": 15
+        },
+        "Dresser": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 2
+        }
+      },
+      "unique_object_types": 15
+    },
+    "TOGGLE_OFF": {
+      "objects": {
+        "Faucet": {
+          "min_count": 1,
+          "max_count": 3,
+          "scene_count": 30
+        },
+        "Candle": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "LightSwitch": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "ShowerHead": {
+          "min_count": 1,
+          "max_count": 2,
+          "scene_count": 24
+        }
+      },
+      "unique_object_types": 4
+    },
+    "TOGGLE_ON": {
+      "objects": {
+        "Faucet": {
+          "min_count": 1,
+          "max_count": 3,
+          "scene_count": 30
+        },
+        "Candle": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "LightSwitch": {
+          "min_count": 1,
+          "max_count": 1,
+          "scene_count": 30
+        },
+        "ShowerHead": {
+          "min_count": 1,
+          "max_count": 2,
+          "scene_count": 24
+        }
+      },
+      "unique_object_types": 4
+    }
+  }
+}

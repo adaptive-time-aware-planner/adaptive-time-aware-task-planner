@@ -1,0 +1,38 @@
+services:
+  ttp:
+    build:
+      context: .
+      dockerfile: Dockerfile_dist
+      target: ttp_development
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+        - USERNAME=${USERNAME:-user}
+        # CPU 버전 PyTorch URL 명시
+        - PYTORCH_INDEX_URL=https://download.pytorch.org/whl/cpu
+    container_name: ttp_dist
+    volumes:
+      - .:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    ports:
+      - "5679:5679"  # Python debugger
+      - "5901:5900"  # VNC
+      - "6080:6080"  # Web VNC
+    stdin_open: true
+    tty: true
+    working_dir: /app
+    environment:
+      # CPU 렌더링 강제 설정
+      - LIBGL_ALWAYS_SOFTWARE=1
+      # 호스트 디스플레이 사용 (X11 Forwarding)
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      # Hugging Face Cache
+      - TRANSFORMERS_CACHE=/app/.cache/huggingface
+      - HF_HOME=/app/.cache/huggingface
+    networks:
+      - uttp_dist_net
+
+networks:
+  uttp_dist_net:
+    driver: bridge

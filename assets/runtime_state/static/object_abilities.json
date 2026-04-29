@@ -1,0 +1,15 @@
+{
+    "banana": ["pickupable", "cookable", "sliceable"],
+    "plate": ["pickupable", "breakable", "dirtyable"],
+    "pan": ["pickupable", "dirtyable"],
+    "sausage": ["pickupable", "cookable", "sliceable"],
+    "stove": ["toggleable"],
+    "orange_bowl": ["pickupable", "canFillWithLiquid", "dirtyable", "breakable"],
+    "blue_bowl": ["pickupable", "canFillWithLiquid", "dirtyable", "breakable"],
+    "sink|sinkbasin": ["canFillWithLiquid", "dirtyable"],
+    "laundry_machine": ["toggleable", "openable"],
+    "chicken": ["pickupable", "cookable", "sliceable"],
+    "cup": ["pickupable", "canFillWithLiquid", "breakable", "dirtyable"],
+    "tomato": ["pickupable", "cookable", "sliceable"],
+    "table": []
+}
