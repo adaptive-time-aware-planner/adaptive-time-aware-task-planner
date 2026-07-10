@@ -1,5 +1,7 @@
 # Adaptive Time-aware Task Planning with LLMs for Efficient Execution under Uncertainty
 
+**Paper material:** [Supplementary material](supplementary.pdf)
+
 This repository contains an AI2-THOR task scheduling framework for household tasks with temporal constraints. The main planner updates task-duration beliefs during execution and uses monitoring actions to reduce schedule risk. The repository also includes baseline planners, task-generation utilities, AI2-THOR scene assets, and optional offline analysis scripts.
 
 ## Repository Layout
